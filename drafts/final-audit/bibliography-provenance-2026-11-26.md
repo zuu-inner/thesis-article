@@ -29,6 +29,10 @@ dikoreksi ke 2023 sesuai seriproceedings.
 - SHA-256 snapshot:
   `e648f8d5e7e9e364af420489364824f116cb414e08d17c89f1d6ef9d0a453ca9`
 
+Hash artefak teks turunan dinormalisasi ke EOL LF sebelum dihitung; aturan ini
+disertai `.gitattributes` agar checkout Windows dan Unix menghasilkan hash dan
+provenance yang sama.
+
 Tiga entri ditandai superseded hanya untuk artikel, tetapi tetap dipertahankan
 di registri root karena histori/kode riset membutuhkan lineage tersebut:
 

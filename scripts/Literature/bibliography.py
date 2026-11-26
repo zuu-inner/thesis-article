@@ -29,6 +29,15 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def sha256_text_bytes(data: bytes) -> str:
+    """Hash tracked text independently of Git checkout EOL conversion."""
+    return sha256_bytes(data.replace(b"\r\n", b"\n"))
+
+
+def sha256_text_file(path: Path) -> str:
+    return sha256_text_bytes(path.read_bytes())
+
+
 def sha256_file(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 

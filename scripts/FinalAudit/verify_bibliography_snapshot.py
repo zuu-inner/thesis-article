@@ -19,6 +19,8 @@ from bibliography import (
     render_snapshot,
     selection_path,
     sha256_bytes,
+    sha256_text_bytes,
+    sha256_text_file,
     validate_selection,
     workspace_root,
 )
@@ -78,6 +80,7 @@ def main() -> int:
     selected, excluded = validate_selection(canonical_entries, manifest)
 
     snapshot_bytes = SNAPSHOT.read_bytes()
+    normalized_snapshot_bytes = snapshot_bytes.replace(b"\r\n", b"\n")
     expected_snapshot = render_snapshot(selected)
     snapshot_entries = parse_bib(SNAPSHOT)
     snapshot_dois = {entry.doi.lower() for entry in snapshot_entries if entry.doi}
@@ -107,17 +110,17 @@ def main() -> int:
     checks = {
         "canonical_commit_blob_matches_provenance": sha256_bytes(canonical_blob) == source["sha256"],
         "canonical_entry_count_matches_provenance": len(canonical_entries) == source["entry_count"],
-        "selection_manifest_hash_matches": sha256_bytes(manifest_file.read_bytes()) == provenance_selection["sha256"],
+        "selection_manifest_hash_matches": sha256_text_file(manifest_file) == provenance_selection["sha256"],
         "selection_covers_canonical_registry": len(selected) + len(excluded) == len(canonical_entries),
         "selection_has_42_entries": len(selected) == 42,
         "selection_has_41_dois": len(selected_dois) == 41,
-        "snapshot_hash_matches_provenance": sha256_bytes(snapshot_bytes) == provenance_snapshot["sha256"],
-        "snapshot_is_exact_canonical_filter": snapshot_bytes == expected_snapshot,
+        "snapshot_hash_matches_provenance": sha256_text_bytes(normalized_snapshot_bytes) == provenance_snapshot["sha256"],
+        "snapshot_is_exact_canonical_filter": normalized_snapshot_bytes == expected_snapshot,
         "snapshot_entry_count_matches_provenance": len(snapshot_entries) == provenance_snapshot["entry_count"],
         "provenance_selected_keys_match": provenance_selection.get("selected_keys") == expected_selected_keys,
         "provenance_excluded_keys_match": provenance_excluded_keys == expected_excluded_keys,
         "doi_registry_hash_matches": REGISTRY.exists()
-        and sha256_bytes(REGISTRY.read_bytes()) == provenance.get("doi_registry", {}).get("sha256"),
+        and sha256_text_file(REGISTRY) == provenance.get("doi_registry", {}).get("sha256"),
         "doi_registry_covers_selected_dois": not selected_missing,
         "manuscript_doi_set_matches_snapshot": draft_dois == snapshot_dois,
         "metadata_doi_set_matches_snapshot": metadata_dois == snapshot_dois,
