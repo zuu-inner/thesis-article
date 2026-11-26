@@ -1,117 +1,86 @@
 #!/usr/bin/env python3
-"""Dump bibliography metadata for the curated INCLUDE set (read-only).
-
-Prints author/title/year/venue/pages/doi for every INCLUDE key of
-article/scripts/Literature/build_matrix.py, for use when composing the
-IEEE-based reference list of the AVITEC manuscript.
-
-Additionally verifies the simdjson published-version DOI
-(10.1007/s00778-019-00578-5, The VLDB Journal) via Crossref, because the
-manuscript cites the published journal version while assets/bib/cites.bib
-carries the arXiv artifact (10.48550/arXiv.1902.08318).
-"""
+"""Dump canonical metadata for the article's explicitly selected references."""
 from __future__ import annotations
 
+import argparse
 import json
-import re
-import urllib.request
-import os
+import subprocess
+import sys
 from pathlib import Path
 
-ROOT = Path(os.environ.get("THESIS_WORKSPACE_ROOT", Path(__file__).resolve().parents[3])).resolve()
-BIB = ROOT / "assets" / "bib" / "cites.bib"
-MAILTO = "rafizuhayr001@gmail.com"
+from bibliography import (
+    ARTICLE_ROOT,
+    load_manifest,
+    parse_bib_text,
+    selection_path,
+    validate_selection,
+    workspace_root,
+)
 
-INCLUDE_KEYS = [
-    "10.1002_spe.3313", "10.48550_arXiv.1902.08318",
-    "10.14778_3115404.3115416", "10.14778_3236187.3236207",
-    "10.14778_3436905.3436926", "10.14778_3137765.3137782",
-    "10.1145_3503222.3507719", "10.1145_3297858.3304008",
-    "10.1145_3623278.3624754", "10.1145_3448016.3452809",
-    "10.14778_3778092.3778109", "10.14778_3746405.3746439",
-    "10.1002_spe.2984", "10.1002_spe.2920", "10.1002_spe.3296",
-    "10.1002_spe.3396", "10.1002_spe.3261", "10.1002_spe.3036",
-    "10.1002_spe.2777", "10.1002_spe.70105", "10.1145_3859286",
-    "10.1145_3487552.3487827", "10.1145_3744916.3764533",
-    "10.1145_3714465", "10.1145_3736169", "10.1145_3760387",
-    "10.1145_2807591.2807644", "10.17487_RFC8259",
-]
+PROVENANCE = ARTICLE_ROOT / "data" / "bib" / "cites.bib.provenance.json"
+REGISTRY = ARTICLE_ROOT / "data" / "json" / "crossref_verify.json"
 
 
-def parse_bib(path: Path) -> dict[str, dict]:
-    text = path.read_text(encoding="utf-8")
-    entries: dict[str, dict] = {}
-    cur: dict | None = None
-    for raw in text.splitlines():
-        line = raw.strip()
-        m = re.match(r"@(\w+)\{([^,]+),", line)
-        if m:
-            if cur:
-                entries[cur["key"]] = cur
-            cur = {"kind": m.group(1).lower(), "key": m.group(2).strip(),
-                   "fields": {}}
-            continue
-        if cur is None:
-            continue
-        if line == "}":
-            entries[cur["key"]] = cur
-            cur = None
-            continue
-        fm = re.match(r"(\w+)\s*=\s*(.*)", line)
-        if fm:
-            val = fm.group(2).rstrip().rstrip(",")
-            val = val.strip("{}").strip()
-            cur["fields"][fm.group(1).lower()] = val
-    if cur:
-        entries[cur["key"]] = cur
-    return entries
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source-commit", default=None)
+    return parser.parse_args()
 
 
-def crossref(doi: str) -> dict | None:
-    url = f"https://api.crossref.org/works/{doi}?mailto={MAILTO}"
-    req = urllib.request.Request(url, headers={"User-Agent": f"refs-dump/1.0 (mailto:{MAILTO})"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.load(r).get("message", {})
-    except Exception as e:  # noqa: BLE001
-        return {"error": str(e)}
+def git_output(root: Path, *args: str) -> bytes:
+    return subprocess.check_output(["git", "-C", str(root), *args], stderr=subprocess.PIPE)
 
 
-def main() -> None:
-    entries = parse_bib(BIB)
-    for key in INCLUDE_KEYS:
-        e = entries.get(key)
-        if e is None:
-            print(f"!! MISSING key in bib: {key}")
-            continue
-        f = e["fields"]
-        venue = f.get("journal") or f.get("booktitle") or f.get("howpublished") or ""
-        print(f"KEY: {key} [{e['kind']}]")
-        print(f"  author  : {f.get('author', '')}")
-        print(f"  title   : {f.get('title', '')}")
-        print(f"  year    : {f.get('year', '')}")
+def main() -> int:
+    args = parse_args()
+    root = workspace_root()
+    provenance = json.loads(PROVENANCE.read_text(encoding="utf-8"))
+    revision = args.source_commit or provenance["source"]["commit"]
+    commit = git_output(
+        root, "rev-parse", "--verify", f"{revision}^{{commit}}"
+    ).decode("ascii").strip()
+    relative_path = provenance["source"]["path"]
+    canonical_text = git_output(root, "show", f"{commit}:{relative_path}").decode("utf-8")
+    entries = parse_bib_text(canonical_text)
+    manifest = load_manifest(selection_path())
+    selected, _ = validate_selection(entries, manifest)
+    by_key = {entry.key: entry for entry in selected}
+
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    registry_by_doi = {
+        result["doi"].lower(): result
+        for result in registry.get("results", [])
+        if result.get("doi")
+    }
+
+    for item in sorted(manifest["selected"], key=lambda value: value["reference"]):
+        entry = by_key[item["key"]]
+        fields = entry.fields
+        venue = (
+            fields.get("journal")
+            or fields.get("booktitle")
+            or fields.get("howpublished")
+            or ""
+        )
+        print(f"REF {item['reference']:02d} | {entry.key} [{entry.kind}]")
+        print(f"  author  : {fields.get('author', '')}")
+        print(f"  title   : {fields.get('title', '')}")
+        print(f"  year    : {fields.get('year', '')}")
         print(f"  venue   : {venue}")
-        for fld in ("volume", "number", "pages", "doi", "publisher"):
-            if f.get(fld):
-                print(f"  {fld:7s}: {f[fld]}")
+        for field in ("volume", "number", "articleno", "pages", "doi", "publisher"):
+            if fields.get(field):
+                print(f"  {field:7s}: {fields[field]}")
+        if entry.doi:
+            verification = registry_by_doi.get(entry.doi.lower(), {})
+            print(
+                "  registry: "
+                f"{verification.get('registry', '-')} / {verification.get('status', '-')}"
+            )
+        else:
+            print("  registry: url-only (no DOI assigned)")
         print()
-
-    print("== Crossref verify: simdjson published version ==")
-    msg = crossref("10.1007/s00778-019-00578-5")
-    if "error" in msg:
-        print("ERROR:", msg["error"])
-    else:
-        print("title    :", (msg.get("title") or [""])[0])
-        print("author   :", "; ".join(
-            f"{a.get('given','')} {a.get('family','')}" for a in msg.get("author", [])))
-        print("container:", (msg.get("container-title") or [""]))
-        issued = msg.get("issued", {}).get("date-parts")
-        print("year     :", issued[0][0] if issued else None)
-        vol = msg.get("volume")
-        issue = msg.get("issue")
-        page = msg.get("page")
-        print(f"vol/issue/page: {vol} / {issue} / {page}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
