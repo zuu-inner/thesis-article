@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from bibliography import parse_bib_text, validate_selection
+from bibliography import parse_bib_text, sha256_text_bytes, validate_selection
 
 
 class BibliographyTests(unittest.TestCase):
@@ -26,6 +26,12 @@ class BibliographyTests(unittest.TestCase):
     def test_duplicate_key_is_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "duplicate BibTeX key: key"):
             parse_bib_text("@article{key,\nyear = {2024}\n}\n@article{key,\nyear = {2025}\n}\n")
+
+    def test_text_hash_is_stable_across_checkout_eols(self) -> None:
+        lf = b"first\nsecond\n"
+        crlf = b"first\r\nsecond\r\n"
+        self.assertEqual(sha256_text_bytes(lf), sha256_text_bytes(crlf))
+        self.assertNotEqual(sha256_text_bytes(lf), sha256_text_bytes(b"first\nchanged\n"))
 
     def test_selection_must_cover_canonical_registry(self) -> None:
         canonical = parse_bib_text(

@@ -1,0 +1,5 @@
+# Bibliography provenance hashes are computed over LF-normalized tracked text.
+# Keep these artifacts byte-stable across Windows and Unix checkouts.
+data/bib/*.bib text eol=lf
+data/bib/*.json text eol=lf
+data/json/*.json text eol=lf

@@ -21,6 +21,8 @@ from bibliography import (
     render_snapshot,
     selection_path,
     sha256_bytes,
+    sha256_text_bytes,
+    sha256_text_file,
     validate_selection,
     workspace_root,
 )
@@ -123,7 +125,7 @@ def main() -> int:
         },
         "selection": {
             "path": "article/data/bib/article-selection.json",
-            "sha256": sha256_bytes(manifest_file.read_bytes()),
+            "sha256": sha256_text_file(manifest_file),
             "selected_key_count": len(selected),
             "excluded_key_count": len(excluded),
             "selected_keys": [entry.key for entry in selected],
@@ -140,7 +142,7 @@ def main() -> int:
         "snapshot": {
             "repository": ARTICLE_REPOSITORY,
             "path": "article/data/bib/cites.bib",
-            "sha256": sha256_bytes(snapshot),
+            "sha256": sha256_text_bytes(snapshot),
             "entry_count": len(selected),
             "doi_count": sum(entry.doi is not None for entry in selected),
             "url_only_keys": [entry.key for entry in selected if entry.doi is None],
@@ -151,7 +153,7 @@ def main() -> int:
         registry_data = json.loads(registry.read_text(encoding="utf-8"))
         provenance["doi_registry"] = {
             "path": "article/data/json/crossref_verify.json",
-            "sha256": sha256_bytes(registry.read_bytes()),
+            "sha256": sha256_text_file(registry),
             "result_count": len(registry_data.get("results", [])),
         }
 

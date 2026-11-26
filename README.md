@@ -74,7 +74,9 @@ tersebut adalah artefak pristine, bukan output build.
 `data/bib/article-selection.json` adalah manifest eksplisit untuk 42 referensi
 artikel dan alasan terpilih/tidaknya terhadap 68 entri registri kanonik. File
 `data/bib/cites.bib` adalah hasil filter, bukan sumber kebenaran; provenance
-lengkap ada di `data/bib/cites.bib.provenance.json`.
+lengkap ada di `data/bib/cites.bib.provenance.json`. Hash SHA-256 untuk artefak
+teks turunan dihitung setelah normalisasi EOL ke LF sehingga checkout Windows
+dan Unix menghasilkan provenance yang sama.
 
 Untuk checkout sebagai submodule, jalankan dari root workspace:
 
