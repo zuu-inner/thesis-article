@@ -322,7 +322,11 @@ def main() -> int:
     }
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out = OUT_DIR / f"validation-{date.today().isoformat()}.json"
-    out.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    out.write_text(
+        json.dumps(report, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+        newline="\n",
+    )
 
     for name, ok in checks.items():
         print(f"{'PASS' if ok else 'FAIL'}  {name}")

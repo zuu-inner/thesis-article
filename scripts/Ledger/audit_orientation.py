@@ -213,7 +213,7 @@ def write_recomputation_report(details: list[dict]) -> Path:
         "No hypothesis verdict, CPU/memory/energy claim, or cross-run pooling "
         "is introduced.",
     ]
-    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     return out
 
 
@@ -263,16 +263,20 @@ def main() -> None:
             "status": status,
         })
 
-    OUT_JSON.write_text(json.dumps({
-        "schema_version": "1.0.0",
-        "kind": "speedup_orientation_audit",
-        "definition": "S = T_V8/T_ZE; point = median(T_V8,i)/median(T_ZE,i), i=1..15",
-        "bootstrap": {"B": B, "seed": SEED, "method": "percentile", "unit": "paired round"},
-        "ledger": str(LEDGER.relative_to(ROOT)).replace("\\", "/"),
-        "cells": len(details),
-        "status_count": status_count,
-        "details": details,
-    }, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    OUT_JSON.write_text(
+        json.dumps({
+            "schema_version": "1.0.0",
+            "kind": "speedup_orientation_audit",
+            "definition": "S = T_V8/T_ZE; point = median(T_V8,i)/median(T_ZE,i), i=1..15",
+            "bootstrap": {"B": B, "seed": SEED, "method": "percentile", "unit": "paired round"},
+            "ledger": str(LEDGER.relative_to(ROOT)).replace("\\", "/"),
+            "cells": len(details),
+            "status_count": status_count,
+            "details": details,
+        }, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
     lines = [
         "# Speedup Orientation Audit — AVITEC Manuscript",
@@ -384,7 +388,7 @@ def main() -> None:
         "Artifact mesin: `article/data/json/orientation-audit.json` "
         f"({len(details)} sel, SHA-256 exhibit terverifikasi per sel).",
     ]
-    OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     rep = write_recomputation_report(details)
     print(f"audit: {len(details)} cells -> {OUT_MD.relative_to(ROOT)}")
     print(f"status: {status_count}")

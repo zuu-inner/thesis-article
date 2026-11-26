@@ -64,8 +64,11 @@ def main() -> None:
         "all_checks_pass": all(v[2] for v in checks.values()),
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
-                   encoding="utf-8")
+    OUT.write_text(
+        json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     for k, v in summary["checks"].items():
         print(f"{v['status']}  {k}: {v['observed']}")
     print(f"-> {OUT.relative_to(ROOT)}")

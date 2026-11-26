@@ -178,8 +178,11 @@ def main() -> None:
         "per_file": {f: sha256(cdir / f) == h for f, h in man_hashes.items()}})
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
-                   encoding="utf-8")
+    OUT.write_text(
+        json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     statuses = Counter(c["status"] for c in summary["checks"])
     print(f"metadata rows: {len(summary['metadata'])}")
     print(f"point checks: {dict(statuses)}")

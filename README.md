@@ -76,7 +76,8 @@ artikel dan alasan terpilih/tidaknya terhadap 68 entri registri kanonik. File
 `data/bib/cites.bib` adalah hasil filter, bukan sumber kebenaran; provenance
 lengkap ada di `data/bib/cites.bib.provenance.json`. Hash SHA-256 untuk artefak
 teks turunan dihitung setelah normalisasi EOL ke LF sehingga checkout Windows
-dan Unix menghasilkan provenance yang sama.
+dan Unix menghasilkan provenance yang sama. Generator dan audit juga menulis
+artefak teks tracked dengan newline LF eksplisit agar status Git tetap bersih.
 
 Untuk checkout sebagai submodule, jalankan dari root workspace:
 

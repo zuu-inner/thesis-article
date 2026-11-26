@@ -76,8 +76,11 @@ def main() -> None:
         "metadata_keywords_match": meta["document"]["keywords"] == keywords,
         "metadata_cites_match": meta["document"]["cites"] == ref_dois,
     }
-    OUT.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
-                   encoding="utf-8")
+    OUT.write_text(
+        json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({k: v for k, v in summary.items() if k != "unmatched_triples"},
                      indent=1))
     print("unmatched triples:", bad_triples[:5])
