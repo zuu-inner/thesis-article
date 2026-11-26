@@ -1,0 +1,20 @@
+{
+ "estimand": "S = T_V8/T_ZE; point = median(T_V8,i)/median(T_ZE,i), i=1..15",
+ "bootstrap": {
+  "B": 10000,
+  "seed": 20261117,
+  "method": "percentile",
+  "unit": "paired round"
+ },
+ "rng": "numpy.random.default_rng(20261117) -> PCG64 (verified)",
+ "cells": 63,
+ "status_count": {
+  "MATCH": 63
+ },
+ "ledger_sha256": "800218af02b4fdc3d18147dfcebd404b93c53e371908dc505fa56bbcee4311eb",
+ "provenance_sha256": "1e5f1ee1207eb5179723131a851f6126d8a50c6d33b383910231fc9be6974db7",
+ "audit_sha256": "4140388d6fc6ee8ff426ef4f309e80ebb4c0af866e1250cf3f994bf8520d3d69",
+ "determinism": "two independent build_ledger.py runs produced identical ledger and provenance hashes",
+ "sign_wilcoxon_in_manuscript": false,
+ "bca_sensitivity_cells": 63
+}

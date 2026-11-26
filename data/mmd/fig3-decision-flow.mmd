@@ -1,0 +1,13 @@
+flowchart TD
+    IN["Input: 15 paired rounds (V8, ZE) from one run"] --> T["Per-engine round values: T_V8,i and T_ZE,i"]
+    T --> P["Point estimate: theta = median(T_V8) / median(T_ZE)"]
+    T --> BS["Paired bootstrap: B = 10,000 resamples of 15 rounds (seed 20261117); same statistic in every replicate"]
+    BS --> CI["95% percentile CI for S = T_V8 / T_ZE"]
+    CI --> I{"CI versus 1"}
+    I -- "entirely above 1" --> C1["On-demand path faster at this boundary and run"]
+    I -- "entirely below 1" --> C2["Baseline faster at this boundary and run"]
+    I -- "includes 1" --> C3["Advantage not distinguishable; no H0 verdict"]
+    C1 --> L
+    C2 --> L
+    C3 --> L
+    L["Claim discipline: per-boundary only; no pooling across runs, sites, or boundaries"]

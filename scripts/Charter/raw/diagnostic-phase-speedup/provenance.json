@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "charter_raw_provenance",
+  "date": "2026-11-18",
+  "slug": "diagnostic-phase-speedup",
+  "description": "Access-pattern boundaries A (full materialization), B (partial projection), C (selective traversal): per-document speedup with 95% CI, both sites, primary runs only.",
+  "source_ledger": "article\\data\\csv\\evidence-ledger.csv",
+  "source_ledger_sha256": "800218af02b4fdc3d18147dfcebd404b93c53e371908dc505fa56bbcee4311eb",
+  "estimand": "S = T_V8/T_ZE; ratio of round-level medians over 15 paired rounds; paired bootstrap B=10000, seed=20261117, percentile 95% CI",
+  "estimand_spec": "article/drafts/paired-bootstrap-estimand-spec.md",
+  "run_ids": [
+    "server-lanjut-20261116060843-8a1324b",
+    "server-lanjut-20261116060900-8a1324b",
+    "server-lanjut-20261116060915-8a1324b",
+    "zuu-20261115071747-6d87bf3",
+    "zuu-20261115075332-6d87bf3",
+    "zuu-20261115080838-6d87bf3"
+  ],
+  "interpretation": "S < 1 favors the V8 baseline; S > 1 favors the on-demand parser (ZE)."
+}

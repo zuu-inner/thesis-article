@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-flowchart" viewBox="0 0 792 860" width="792" height="860" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:14px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,Arial, Helvetica, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="flowchart">
+<style><![CDATA[
+/* =========================================
+   Academic - Draw.io Classic
+   Monochrome Traditional Flowchart
+   ========================================= */
+
+.pele {
+    /* Background */
+    --pele-bg: #ffffff;
+
+    /* Typography */
+    --pele-fg: #000000;
+    --pele-fg-on-light: #000000;
+    --pele-fg-on-dark: #ffffff;
+    --pele-muted: #333333;
+
+    /* Lines and borders */
+    --pele-line: #000000;
+    --pele-border: #000000;
+
+    /* Node surfaces */
+    --pele-surface: #ffffff;
+    --pele-surface-alt: #ffffff;
+
+    /* Accent and critical */
+    --pele-accent: #000000;
+    --pele-critical: #000000;
+
+    /* Typography */
+    --pele-font: Arial, Helvetica, sans-serif;
+    --pele-font-mono: "Courier New", monospace;
+
+    --pele-title-weight: bold;
+    --pele-heading-weight: bold;
+    --pele-bold-weight: bold;
+
+    /* Monochrome palettes */
+    --pele-series-1: #000000;
+    --pele-series-2: #000000;
+    --pele-series-3: #000000;
+    --pele-series-4: #000000;
+    --pele-series-5: #000000;
+    --pele-series-6: #000000;
+    --pele-series-7: #000000;
+    --pele-series-8: #000000;
+}
+
+/* Typography */
+.pele-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-edge-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-title,
+.pele-cluster-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+/* Edges */
+.pele-edge {
+    color: #000000;
+}
+
+/* SVG background */
+.pele {
+    background: #ffffff;
+}
+
+/* Geometry */
+.pele-node rect {
+	rx: 4px;
+	ry: 4px;
+}
+]]></style><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_IN_T_0"><path d="M261.5,76L261.5,117"/><path class="pele-marker" d="M261.5,124L258.14,116L264.86,116Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_T_P_0"><path d="M217.3,184C217.3,210.5 129.75,210.5 129.75,237L129.75,243"/><path class="pele-marker" d="M129.75,250L126.39,242L133.11,242Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_T_BS_0"><path d="M305.7,184C305.7,201.5 393.26,201.5 393.26,219L393.26,225"/><path class="pele-marker" d="M393.26,232L389.9,224L396.62,224Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_BS_CI_0"><path d="M393.26,328L393.26,369"/><path class="pele-marker" d="M393.26,376L389.9,368L396.62,368Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_CI_I_0"><path d="M393.26,436L393.26,477"/><path class="pele-marker" d="M393.26,484L389.9,476L396.62,476Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_I_C1_0"><path d="M377.26,557.25C377.26,572.09 126.6,572.9 126.6,587.75L126.6,630.25"/><path class="pele-marker" d="M126.6,637.25L123.24,629.25L129.96,629.25Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_I_C2_0"><path d="M393.26,567.25L393.26,630.25"/><path class="pele-marker" d="M393.26,637.25L389.9,629.25L396.62,629.25Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_I_C3_0"><path d="M409.26,557.25C409.26,571.93 662.64,573.06 662.64,587.75L662.64,630.25"/><path class="pele-marker" d="M662.64,637.25L659.28,629.25L666,629.25Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_C1_L_0"><path d="M126.6,697.25C126.6,722.05 188.05,737.25 288.32,737.25C388.58,737.25 450.03,743.23 450.03,753L450.03,758.25"/><path class="pele-marker" d="M450.03,765.25L446.67,757.25L453.39,757.25Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_C2_L_0"><path d="M393.26,697.25C393.26,724.75 466.03,724.75 466.03,752.25L466.03,758.25"/><path class="pele-marker" d="M466.03,765.25L462.67,757.25L469.39,757.25Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_C3_L_0"><path d="M662.64,697.25C662.64,724.75 578.3,724.75 578.3,752.25L578.3,758.25"/><path class="pele-marker" d="M578.3,765.25L574.94,757.25L581.66,757.25Z" fill="var(--_l)" stroke="none"/></g></g><g class="pele-edge-labels" font-size="12"><g class="pele-edge-label" data-id="L_I_C1_0"><rect x="80.25" y="589.75" width="92.71" height="18" rx="3" fill="var(--_bg)"/><text x="126.6" y="602.95" text-anchor="middle">entirely above 1</text></g><g class="pele-edge-label" data-id="L_I_C2_0"><rect x="347.57" y="589.75" width="91.36" height="18" rx="3" fill="var(--_bg)"/><text x="393.26" y="602.95" text-anchor="middle">entirely below 1</text></g><g class="pele-edge-label" data-id="L_I_C3_0"><rect x="631.63" y="589.75" width="62.02" height="18" rx="3" fill="var(--_bg)"/><text x="662.64" y="602.95" text-anchor="middle">includes 1</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="IN" transform="translate(261.5,46)"><rect x="-117.99" y="-30" width="235.99" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Input: 15 paired rounds (V8, ZE)</tspan><tspan x="0" y="13.9">from one run</tspan></text></g><g class="pele-node pele-shape-rect" data-id="T" transform="translate(261.5,154)"><rect x="-96.2" y="-30" width="192.41" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Per-engine round values:</tspan><tspan x="0" y="13.9">T_V8,i and T_ZE,i</tspan></text></g><g class="pele-node pele-shape-rect" data-id="P" transform="translate(129.75,280)"><rect x="-112.91" y="-30" width="225.83" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Point estimate: theta =</tspan><tspan x="0" y="13.9">median(T_V8) / median(T_ZE)</tspan></text></g><g class="pele-node pele-shape-rect" data-id="BS" transform="translate(393.26,280)"><rect x="-110.6" y="-48" width="221.19" height="96" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-22.1">Paired bootstrap: B = 10,000</tspan><tspan x="0" y="-4.1">resamples of 15 rounds (seed</tspan><tspan x="0" y="13.9">20261117); same statistic in</tspan><tspan x="0" y="31.9">every replicate</tspan></text></g><g class="pele-node pele-shape-rect" data-id="CI" transform="translate(393.26,406)"><rect x="-114.68" y="-30" width="229.37" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">95% percentile CI for S = T_V8</tspan><tspan x="0" y="13.9">/ T_ZE</tspan></text></g><g class="pele-node pele-shape-diam" data-id="I" transform="translate(393.26,525.62)"><polygon points="0,-41.62 66.6,0 0,41.62 -66.6,0" fill="var(--_s)" stroke="var(--_b)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">CI versus 1</text></g><g class="pele-node pele-shape-rect" data-id="C1" transform="translate(126.6,667.25)"><rect x="-110.6" y="-30" width="221.21" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">On-demand path faster at this</tspan><tspan x="0" y="13.9">boundary and run</tspan></text></g><g class="pele-node pele-shape-rect" data-id="C2" transform="translate(393.26,667.25)"><rect x="-116.05" y="-30" width="232.1" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Baseline faster at this boundary</tspan><tspan x="0" y="13.9">and run</tspan></text></g><g class="pele-node pele-shape-rect" data-id="C3" transform="translate(662.64,667.25)"><rect x="-113.33" y="-30" width="226.67" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Advantage not distinguishable;</tspan><tspan x="0" y="13.9">no H0 verdict</tspan></text></g><g class="pele-node pele-shape-rect" data-id="L" transform="translate(518.16,804.25)"><rect x="-112.14" y="-39" width="224.27" height="78" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-13.1">Claim discipline: per-boundary</tspan><tspan x="0" y="4.9">only; no pooling across runs,</tspan><tspan x="0" y="22.9">sites, or boundaries</tspan></text></g></g></svg>

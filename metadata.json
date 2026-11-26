@@ -1,0 +1,96 @@
+{
+ "document": {
+  "title": {
+   "primary": "On-Demand JSON Parsing in Node.js Servers via WebAssembly: A Multi-Boundary Evaluation",
+   "secondary": []
+  },
+  "keywords": [
+   "JSON parsing",
+   "on-demand parsing",
+   "WebAssembly",
+   "Node.js",
+   "performance evaluation"
+  ],
+  "repositories": {
+   "ze_json": "https://github.com/zuudevs/ze_json.git",
+   "saq-report": "https://github.com/zuudevs/saq-report.git"
+  },
+  "cites": [
+   "10.17487/RFC8259",
+   "10.1002/spe.3313",
+   "10.1007/s00778-019-00578-5",
+   "10.14778/3115404.3115416",
+   "10.14778/3236187.3236207",
+   "10.1145/3503222.3507719",
+   "10.1145/3297858.3304008",
+   "10.14778/3436905.3436926",
+   "10.14778/3137765.3137782",
+   "10.1145/3448016.3452809",
+   "10.14778/3746405.3746439",
+   "10.1145/3623278.3624754",
+   "10.14778/3778092.3778109",
+   "10.1016/j.is.2019.101478",
+   "10.1016/j.is.2025.102537",
+   "10.1007/s11280-025-01336-0",
+   "10.1016/j.is.2020.101686",
+   "10.1145/3321704",
+   "10.14778/3611479.3611481",
+   "10.1145/3588957",
+   "10.1002/spe.2984",
+   "10.1002/spe.2920",
+   "10.1002/spe.3296",
+   "10.1002/spe.3396",
+   "10.1002/spe.3261",
+   "10.1002/spe.3036",
+   "10.1002/spe.2777",
+   "10.1002/spe.70105",
+   "10.1145/3859286",
+   "10.1145/3712197",
+   "10.1007/s10723-023-09669-8",
+   "10.1145/3744916.3764533",
+   "10.1145/3714465",
+   "10.1145/3736169",
+   "10.1145/3498688",
+   "10.3390/fi16090341",
+   "10.1109/ACCESS.2026.3732375",
+   "10.1145/2807591.2807644",
+   "10.1007/s10664-019-09681-1",
+   "10.1007/s11704-018-7319-2",
+   "10.1109/LCA.2026.3730505"
+  ]
+ },
+ "authors": {
+  "corresponding": {
+   "first_name": "Rafi",
+   "middle_name": "Indra Pramudhito",
+   "last_name": "Zuhayr",
+   "email": "rafizuhayr001@gmail.com",
+   "others": {
+    "orcid": "https://orcid.org/0009-0006-3162-5646",
+    "github": "https://github.com/zuudevs"
+   },
+   "institute": {
+    "name": "Institut Teknologi PLN",
+    "department": "Informatics Engineering",
+    "address": {
+     "country": "Indonesia",
+     "province": {
+      "primary": "Daerah Khusus Ibukota Jakarta",
+      "secondary": [
+       "Jakarta",
+       "DKI Jakarta"
+      ]
+     },
+     "city": "Jakarta Barat",
+     "subdistrict": "Cengkareng",
+     "streets": [
+      "Jl. Duri Cengkareng Raya No.3",
+      "RT.1/RW.1",
+      "Duri Kosambi"
+     ],
+     "zip_code": "11750"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,78 @@
+/* =========================================
+   Academic - Draw.io Classic
+   Monochrome Traditional Flowchart
+   ========================================= */
+
+.pele {
+    /* Background */
+    --pele-bg: #ffffff;
+
+    /* Typography */
+    --pele-fg: #000000;
+    --pele-fg-on-light: #000000;
+    --pele-fg-on-dark: #ffffff;
+    --pele-muted: #333333;
+
+    /* Lines and borders */
+    --pele-line: #000000;
+    --pele-border: #000000;
+
+    /* Node surfaces */
+    --pele-surface: #ffffff;
+    --pele-surface-alt: #ffffff;
+
+    /* Accent and critical */
+    --pele-accent: #000000;
+    --pele-critical: #000000;
+
+    /* Typography */
+    --pele-font: Arial, Helvetica, sans-serif;
+    --pele-font-mono: "Courier New", monospace;
+
+    --pele-title-weight: bold;
+    --pele-heading-weight: bold;
+    --pele-bold-weight: bold;
+
+    /* Monochrome palettes */
+    --pele-series-1: #000000;
+    --pele-series-2: #000000;
+    --pele-series-3: #000000;
+    --pele-series-4: #000000;
+    --pele-series-5: #000000;
+    --pele-series-6: #000000;
+    --pele-series-7: #000000;
+    --pele-series-8: #000000;
+}
+
+/* Typography */
+.pele-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-edge-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-title,
+.pele-cluster-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+/* Edges */
+.pele-edge {
+    color: #000000;
+}
+
+/* SVG background */
+.pele {
+    background: #ffffff;
+}
+
+/* Geometry */
+.pele-node rect {
+	rx: 4px;
+	ry: 4px;
+}

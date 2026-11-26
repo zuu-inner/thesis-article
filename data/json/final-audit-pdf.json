@@ -1,0 +1,43 @@
+{
+ "pdf_pages": 14,
+ "pdf_metadata": {
+  "title": "On-Demand JSON Parsing in Node.js Servers via WebAssembly: A Multi-Boundary Evaluation",
+  "author": "Rafi Indra Pramudhito Zuhayr",
+  "subject": "Original Research Article",
+  "keywords": "JSON parsing; on-demand parsing; WebAssembly; Node.js; performance evaluation"
+ },
+ "checks": {
+  "page_count": {
+   "observed": 14,
+   "expected": 14,
+   "status": "PASS"
+  },
+  "no_stale_text": {
+   "observed": [],
+   "expected": [],
+   "status": "PASS"
+  },
+  "required_sections_and_captions": {
+   "observed": [],
+   "expected": [],
+   "status": "PASS"
+  },
+  "references_1_to_28": {
+   "observed": true,
+   "expected": true,
+   "status": "PASS"
+  },
+  "numeric_triples": {
+   "observed": 45,
+   "expected": "all in ledger",
+   "status": "PASS"
+  },
+  "no_empty_pages": {
+   "observed": true,
+   "expected": true,
+   "status": "PASS"
+  }
+ },
+ "displayed_triples": 45,
+ "all_checks_pass": true
+}

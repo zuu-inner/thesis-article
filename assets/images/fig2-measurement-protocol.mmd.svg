@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-flowchart" viewBox="0 0 576 1022" width="576" height="1022" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:14px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,Arial, Helvetica, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="flowchart">
+<style><![CDATA[
+/* =========================================
+   Academic - Draw.io Classic
+   Monochrome Traditional Flowchart
+   ========================================= */
+
+.pele {
+    /* Background */
+    --pele-bg: #ffffff;
+
+    /* Typography */
+    --pele-fg: #000000;
+    --pele-fg-on-light: #000000;
+    --pele-fg-on-dark: #ffffff;
+    --pele-muted: #333333;
+
+    /* Lines and borders */
+    --pele-line: #000000;
+    --pele-border: #000000;
+
+    /* Node surfaces */
+    --pele-surface: #ffffff;
+    --pele-surface-alt: #ffffff;
+
+    /* Accent and critical */
+    --pele-accent: #000000;
+    --pele-critical: #000000;
+
+    /* Typography */
+    --pele-font: Arial, Helvetica, sans-serif;
+    --pele-font-mono: "Courier New", monospace;
+
+    --pele-title-weight: bold;
+    --pele-heading-weight: bold;
+    --pele-bold-weight: bold;
+
+    /* Monochrome palettes */
+    --pele-series-1: #000000;
+    --pele-series-2: #000000;
+    --pele-series-3: #000000;
+    --pele-series-4: #000000;
+    --pele-series-5: #000000;
+    --pele-series-6: #000000;
+    --pele-series-7: #000000;
+    --pele-series-8: #000000;
+}
+
+/* Typography */
+.pele-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-edge-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-title,
+.pele-cluster-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+/* Edges */
+.pele-edge {
+    color: #000000;
+}
+
+/* SVG background */
+.pele {
+    background: #ffffff;
+}
+
+/* Geometry */
+.pele-node rect {
+	rx: 4px;
+	ry: 4px;
+}
+]]></style><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_W_R_0"><path d="M218.77,94L218.77,135"/><path class="pele-marker" d="M218.77,142L215.41,134L222.13,134Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_R_AGG_0"><path d="M218.77,220L218.77,261"/><path class="pele-marker" d="M218.77,268L215.41,260L222.13,260Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_AGG_PAR_0"><path d="M218.77,364L218.77,405"/><path class="pele-marker" d="M218.77,412L215.41,404L222.13,404Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_PAR_VOID_0"><path d="M172.86,562.29C172.86,586.89 102.87,586.89 102.87,611.49L102.87,661.49"/><path class="pele-marker" d="M102.87,668.49L99.51,660.49L106.23,660.49Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_PAR_REC_0"><path d="M264.69,562.29C264.69,586.89 334.68,586.89 334.68,611.49L334.68,653.99"/><path class="pele-marker" d="M334.68,660.99L331.32,652.99L338.04,652.99Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_REC_VAL_0"><path d="M334.68,720.99L334.68,761.99"/><path class="pele-marker" d="M334.68,768.99L331.32,760.99L338.04,760.99Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_VAL_DROP_0"><path d="M323.51,868.6C323.51,882.34 219.45,882.34 219.45,896.08L219.45,938.58"/><path class="pele-marker" d="M219.45,945.58L216.09,937.58L222.81,937.58Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_VAL_LED_0"><path d="M345.84,868.6C345.84,882.34 449.91,882.34 449.91,896.08L449.91,938.58"/><path class="pele-marker" d="M449.91,945.58L446.55,937.58L453.27,937.58Z" fill="var(--_l)" stroke="none"/></g></g><g class="pele-edge-labels" font-size="12"><g class="pele-edge-label" data-id="L_PAR_VOID_0"><rect x="73.2" y="613.49" width="59.34" height="18" rx="3" fill="var(--_bg)"/><text x="102.87" y="626.69" text-anchor="middle">mismatch</text></g><g class="pele-edge-label" data-id="L_PAR_REC_0"><rect x="308.67" y="613.49" width="52.02" height="18" rx="3" fill="var(--_bg)"/><text x="334.68" y="626.69" text-anchor="middle">identical</text></g><g class="pele-edge-label" data-id="L_VAL_DROP_0"><rect x="202.78" y="898.08" width="33.34" height="18" rx="3" fill="var(--_bg)"/><text x="219.45" y="911.28" text-anchor="middle">FAIL</text></g><g class="pele-edge-label" data-id="L_VAL_LED_0"><rect x="429.9" y="898.08" width="40.02" height="18" rx="3" fill="var(--_bg)"/><text x="449.91" y="911.28" text-anchor="middle">PASS</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="W" transform="translate(218.77,55)"><rect x="-109.42" y="-39" width="218.84" height="78" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-13.1">Warmup: 3 untimed iterations</tspan><tspan x="0" y="4.9">per path (E: 3 requests per</tspan><tspan x="0" y="22.9">engine)</tspan></text></g><g class="pele-node pele-shape-rect" data-id="R" transform="translate(218.77,181)"><rect x="-110.99" y="-39" width="221.99" height="78" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-13.1">15 independent measured</tspan><tspan x="0" y="4.9">rounds; path order rotated per</tspan><tspan x="0" y="22.9">round</tspan></text></g><g class="pele-node pele-shape-rect" data-id="AGG" transform="translate(218.77,316)"><rect x="-112.55" y="-48" width="225.1" height="96" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-22.1">Per-round value: mean of reps</tspan><tspan x="0" y="-4.1">(A-D); median of 10 requests</tspan><tspan x="0" y="13.9">per engine (E: 20 requests per</tspan><tspan x="0" y="31.9">round total)</tspan></text></g><g class="pele-node pele-shape-diam" data-id="PAR" transform="translate(218.77,501.49)"><polygon points="0,-89.49 143.19,0 0,89.49 -143.19,0" fill="var(--_s)" stroke="var(--_b)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Parity gate (E): all 300 response</tspan><tspan x="0" y="13.9">bodies byte-identical?</tspan></text></g><g class="pele-node pele-shape-rect" data-id="VOID" transform="translate(102.87,690.99)"><rect x="-86.87" y="-22.5" width="173.73" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">Run voided: no record</text></g><g class="pele-node pele-shape-rect" data-id="REC" transform="translate(334.68,690.99)"><rect x="-104.95" y="-30" width="209.89" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Raw exhibit + measurement</tspan><tspan x="0" y="13.9">record (schema v1.0.0)</tspan></text></g><g class="pele-node pele-shape-diam" data-id="VAL" transform="translate(334.68,822.28)"><polygon points="0,-53.3 85.28,0 0,53.3 -85.27,0" fill="var(--_s)" stroke="var(--_b)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">Schema validator</text></g><g class="pele-node pele-shape-rect" data-id="DROP" transform="translate(219.45,968.08)"><rect x="-80.64" y="-22.5" width="161.27" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">Not used in analysis</text></g><g class="pele-node pele-shape-rect" data-id="LED" transform="translate(449.91,975.58)"><rect x="-109.82" y="-30" width="219.64" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">Evidence ledger: 16 columns,</tspan><tspan x="0" y="13.9">sha256 provenance</tspan></text></g></g></svg>

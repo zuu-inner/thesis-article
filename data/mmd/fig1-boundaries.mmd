@@ -1,0 +1,16 @@
+flowchart TB
+    subgraph SG1["Boundary A-C: access pattern (in-process JSON)"]
+        direction LR
+        A["A: full materialization"] --- B["B: partial projection (L2 project)"] --- C["C: selective traversal (L1)"]
+    end
+    subgraph SG2["Boundary D: repository (saq-report state stores)"]
+        direction LR
+        D1["V8: read(), then length"] --- D2["ZE: readCount() over canonical cached bytes"]
+    end
+    subgraph SG3["Boundary E: HTTP endpoint GET /rekap"]
+        direction LR
+        E1["middleware"] --- E2["handler: 4 repo calls"] --- E3["EJS render"] --- E4["response"]
+    end
+    SG1 --> SG2
+    SG2 --> SG3
+    NOTE["Engine toggle: V8 JSON.parse vs ze_json (C++23 on-demand parser, wasm64 C-ABI) - byte-identical outputs"]

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="pele pele-flowchart" viewBox="0 0 1026 449" width="1026" height="449" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:14px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,Arial, Helvetica, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="flowchart">
+<style><![CDATA[
+/* =========================================
+   Academic - Draw.io Classic
+   Monochrome Traditional Flowchart
+   ========================================= */
+
+.pele {
+    /* Background */
+    --pele-bg: #ffffff;
+
+    /* Typography */
+    --pele-fg: #000000;
+    --pele-fg-on-light: #000000;
+    --pele-fg-on-dark: #ffffff;
+    --pele-muted: #333333;
+
+    /* Lines and borders */
+    --pele-line: #000000;
+    --pele-border: #000000;
+
+    /* Node surfaces */
+    --pele-surface: #ffffff;
+    --pele-surface-alt: #ffffff;
+
+    /* Accent and critical */
+    --pele-accent: #000000;
+    --pele-critical: #000000;
+
+    /* Typography */
+    --pele-font: Arial, Helvetica, sans-serif;
+    --pele-font-mono: "Courier New", monospace;
+
+    --pele-title-weight: bold;
+    --pele-heading-weight: bold;
+    --pele-bold-weight: bold;
+
+    /* Monochrome palettes */
+    --pele-series-1: #000000;
+    --pele-series-2: #000000;
+    --pele-series-3: #000000;
+    --pele-series-4: #000000;
+    --pele-series-5: #000000;
+    --pele-series-6: #000000;
+    --pele-series-7: #000000;
+    --pele-series-8: #000000;
+}
+
+/* Typography */
+.pele-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-edge-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+.pele-title,
+.pele-cluster-label {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: #000000;
+}
+
+/* Edges */
+.pele-edge {
+    color: #000000;
+}
+
+/* SVG background */
+.pele {
+    background: #ffffff;
+}
+
+/* Geometry */
+.pele-node rect {
+	rx: 4px;
+	ry: 4px;
+}
+]]></style><g class="pele-clusters"><g class="pele-cluster" data-id="SG3"><rect x="52.57" y="331" width="653.23" height="102" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-cluster-label" fill="var(--_m)" x="191.85" y="354.4" text-anchor="middle">Boundary E: HTTP endpoint GET /rekap</text></g><g class="pele-cluster" data-id="SG2"><rect x="132.28" y="166" width="493.82" height="117" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/></g><g class="pele-cluster" data-id="SG1"><rect x="16" y="16" width="726.37" height="102" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-cluster-label" fill="var(--_m)" x="182.88" y="39.4" text-anchor="middle">Boundary A-C: access pattern (in-process JSON)</text></g></g><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_A_B_0"><path d="M201.15,75.5L249.15,75.5"/></g><g class="pele-edge" data-id="L_B_C_0"><path d="M479.67,75.5L527.67,75.5"/></g><g class="pele-edge" data-id="L_D1_D2_0"><path d="M327.58,233L375.58,233"/></g><g class="pele-edge" data-id="L_E1_E2_0"><path d="M180.14,390.5L228.14,390.5"/></g><g class="pele-edge" data-id="L_E2_E3_0"><path d="M390.19,390.5L438.19,390.5"/></g><g class="pele-edge" data-id="L_E3_E4_0"><path d="M544.22,390.5L592.22,390.5"/></g><g class="pele-edge" data-id="L_SG1_SG2_0"><path d="M379.18,118L379.18,159"/><path class="pele-marker" d="M379.18,166L375.82,158L382.54,158Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_SG2_SG3_0"><path d="M379.18,283L379.18,324"/><path class="pele-marker" d="M379.18,331L375.82,323L382.54,323Z" fill="var(--_l)" stroke="none"/></g></g><g class="pele-cluster-titles"><g class="pele-cluster-title" data-id="SG2"><text fill="none" stroke="color-mix(in srgb,var(--_a) 50%,var(--_bg))" stroke-width="5" stroke-linejoin="round" x="294.49" y="189.4" text-anchor="middle">Boundary D: repository (saq-report state stores)</text><text class="pele-cluster-label" fill="var(--_m)" x="294.49" y="189.4" text-anchor="middle">Boundary D: repository (saq-report state stores)</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="A" transform="translate(118.58,75.5)"><rect x="-82.57" y="-22.5" width="165.15" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">A: full materialization</text></g><g class="pele-node pele-shape-rect" data-id="B" transform="translate(364.41,75.5)"><rect x="-115.26" y="-22.5" width="230.52" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">B: partial projection (L2 project)</text></g><g class="pele-node pele-shape-rect" data-id="C" transform="translate(625.02,75.5)"><rect x="-97.35" y="-22.5" width="194.7" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">C: selective traversal (L1)</text></g><g class="pele-node pele-shape-rect" data-id="D1" transform="translate(239.93,233)"><rect x="-87.65" y="-22.5" width="175.3" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">V8: read(), then length</text></g><g class="pele-node pele-shape-rect" data-id="D2" transform="translate(490.83,233)"><rect x="-115.26" y="-30" width="230.52" height="60" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.1">ZE: readCount() over canonical</tspan><tspan x="0" y="13.9">cached bytes</tspan></text></g><g class="pele-node pele-shape-rect" data-id="E1" transform="translate(126.35,390.5)"><rect x="-53.78" y="-22.5" width="107.57" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">middleware</text></g><g class="pele-node pele-shape-rect" data-id="E2" transform="translate(309.16,390.5)"><rect x="-81.03" y="-22.5" width="162.06" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">handler: 4 repo calls</text></g><g class="pele-node pele-shape-rect" data-id="E3" transform="translate(491.21,390.5)"><rect x="-53.01" y="-22.5" width="106.03" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">EJS render</text></g><g class="pele-node pele-shape-rect" data-id="E4" transform="translate(639.01,390.5)"><rect x="-46.79" y="-22.5" width="93.58" height="45" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="4.9" text-anchor="middle">response</text></g><g class="pele-node pele-shape-rect" data-id="NOTE" transform="translate(896.08,70)"><rect x="-113.71" y="-48" width="227.42" height="96" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-22.1">Engine toggle: V8 JSON.parse</tspan><tspan x="0" y="-4.1">vs ze_json (C++23 on-demand</tspan><tspan x="0" y="13.9">parser, wasm64 C-ABI) -</tspan><tspan x="0" y="31.9">byte-identical outputs</tspan></text></g></g></svg>

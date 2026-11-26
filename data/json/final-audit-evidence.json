@@ -1,0 +1,531 @@
+{
+ "metadata": [
+  {
+   "phase": "A",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "A",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "site": "saq_server",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "B",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "B",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "site": "saq_server",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "C",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "C",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "site": "saq_server",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 30
+  },
+  {
+   "phase": "D",
+   "run_id": "zuu-20261115080840-6d87bf3",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 2
+  },
+  {
+   "phase": "D",
+   "run_id": "server-lanjut-20261116060933-8a1324b",
+   "site": "saq_server",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 2
+  },
+  {
+   "phase": "E",
+   "run_id": "zuu-20261116101458-8556513",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1-live-store",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 20
+  },
+  {
+   "phase": "E",
+   "run_id": "zuu-20261117000112-6979e3f",
+   "site": "dev_device",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1-live-store",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 20
+  },
+  {
+   "phase": "E",
+   "run_id": "server-lanjut-20261117003513-530f751",
+   "site": "saq_server",
+   "runtime": "node v26.13.1 (v8 14.6.202.34-node.40) + ze_json wasm64 (ABI 2026000302)",
+   "core_version": "0.3.2",
+   "js_version": "0.3.0",
+   "abi_version": 2026000302,
+   "artifact_sha256": "9795f2e80a4a5e2cfe980d89f5a911a6796cb69ac91e3815928a78c9845fe373",
+   "corpus": "saq_payload_v1-live-store",
+   "rounds": 15,
+   "warmup": 3,
+   "config_iterations": 20
+  }
+ ],
+ "checks": [
+  {
+   "key": "A-primary-dev_device-assistants",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0544,
+   "ledger": 0.0544,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-dev_device-courses",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0494,
+   "ledger": 0.0494,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-dev_device-globalConfig",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0445,
+   "ledger": 0.0445,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-dev_device-lecturers",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0428,
+   "ledger": 0.0428,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-dev_device-reports",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0613,
+   "ledger": 0.0613,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-dev_device-schedules",
+   "run_id": "zuu-20261115071747-6d87bf3",
+   "recomputed": 0.0446,
+   "ledger": 0.0446,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-assistants",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.0669,
+   "ledger": 0.0669,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-courses",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.0493,
+   "ledger": 0.0493,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-globalConfig",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.0501,
+   "ledger": 0.0501,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-lecturers",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.052,
+   "ledger": 0.052,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-reports",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.0576,
+   "ledger": 0.0576,
+   "status": "MATCH"
+  },
+  {
+   "key": "A-primary-saq_server-schedules",
+   "run_id": "server-lanjut-20261116060843-8a1324b",
+   "recomputed": 0.0569,
+   "ledger": 0.0569,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-assistants",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.1059,
+   "ledger": 0.1059,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-courses",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.1229,
+   "ledger": 0.1229,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-globalConfig",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.0987,
+   "ledger": 0.0987,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-lecturers",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.0755,
+   "ledger": 0.0755,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-reports",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.1594,
+   "ledger": 0.1594,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-dev_device-schedules",
+   "run_id": "zuu-20261115075332-6d87bf3",
+   "recomputed": 0.1287,
+   "ledger": 0.1287,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-assistants",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.113,
+   "ledger": 0.113,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-courses",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.1228,
+   "ledger": 0.1228,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-globalConfig",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.1043,
+   "ledger": 0.1043,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-lecturers",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.0828,
+   "ledger": 0.0828,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-reports",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.1436,
+   "ledger": 0.1436,
+   "status": "MATCH"
+  },
+  {
+   "key": "B-primary-saq_server-schedules",
+   "run_id": "server-lanjut-20261116060900-8a1324b",
+   "recomputed": 0.1282,
+   "ledger": 0.1282,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-assistants",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 1.168,
+   "ledger": 1.168,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-courses",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 0.9223,
+   "ledger": 0.9223,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-globalConfig",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 0.0452,
+   "ledger": 0.0452,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-lecturers",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 1.0455,
+   "ledger": 1.0455,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-reports",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 0.2861,
+   "ledger": 0.2861,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-dev_device-schedules",
+   "run_id": "zuu-20261115080838-6d87bf3",
+   "recomputed": 1.6454,
+   "ledger": 1.6454,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-assistants",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 1.4194,
+   "ledger": 1.4194,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-courses",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 0.8561,
+   "ledger": 0.8561,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-globalConfig",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 0.0469,
+   "ledger": 0.0469,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-lecturers",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 0.9562,
+   "ledger": 0.9562,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-reports",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 0.3087,
+   "ledger": 0.3087,
+   "status": "MATCH"
+  },
+  {
+   "key": "C-primary-saq_server-schedules",
+   "run_id": "server-lanjut-20261116060915-8a1324b",
+   "recomputed": 1.4983,
+   "ledger": 1.4983,
+   "status": "MATCH"
+  },
+  {
+   "key": "D-primary-dev_device-mongo-cache",
+   "run_id": "zuu-20261115080840-6d87bf3",
+   "recomputed": 2.8802,
+   "ledger": 2.8802,
+   "status": "MATCH"
+  },
+  {
+   "key": "D-primary-dev_device-file-store",
+   "run_id": "zuu-20261115080840-6d87bf3",
+   "recomputed": 0.9526,
+   "ledger": 0.9526,
+   "status": "MATCH"
+  },
+  {
+   "key": "D-primary-saq_server-mongo-cache",
+   "run_id": "server-lanjut-20261116060933-8a1324b",
+   "recomputed": 2.6654,
+   "ledger": 2.6654,
+   "status": "MATCH"
+  },
+  {
+   "key": "D-primary-saq_server-file-store",
+   "run_id": "server-lanjut-20261116060933-8a1324b",
+   "recomputed": 0.9871,
+   "ledger": 0.9871,
+   "status": "MATCH"
+  },
+  {
+   "key": "E-primary-dev_device-rekap-zuu-20261116101458-8556513",
+   "run_id": "zuu-20261116101458-8556513",
+   "structure_15x20_10_10": true,
+   "n_v8": 150,
+   "n_ze": 150,
+   "unique_body_hashes": 1,
+   "recomputed": 1.0501,
+   "ledger": 1.0501,
+   "status": "MATCH"
+  },
+  {
+   "key": "E-primary-dev_device-rekap-zuu-20261117000112-6979e3f",
+   "run_id": "zuu-20261117000112-6979e3f",
+   "structure_15x20_10_10": true,
+   "n_v8": 150,
+   "n_ze": 150,
+   "unique_body_hashes": 1,
+   "recomputed": 1.0278,
+   "ledger": 1.0278,
+   "status": "MATCH"
+  },
+  {
+   "key": "E-primary-saq_server-rekap-server-lanjut-20261117003513-530f751",
+   "run_id": "server-lanjut-20261117003513-530f751",
+   "structure_15x20_10_10": true,
+   "n_v8": 150,
+   "n_ze": 150,
+   "unique_body_hashes": 1,
+   "recomputed": 1.1544,
+   "ledger": 1.1544,
+   "status": "MATCH"
+  }
+ ],
+ "corpus": [
+  {
+   "run_id": "zuu-20261116101458-8556513",
+   "site": "dev_device",
+   "store_label": "saq_payload_v1-live-store",
+   "all_six_match_manifest": true,
+   "per_file": {
+    "config_asisten.json": true,
+    "config_global.json": true,
+    "courses.json": true,
+    "lecturers.json": true,
+    "reports.json": true,
+    "schedules.json": true
+   }
+  },
+  {
+   "run_id": "zuu-20261117000112-6979e3f",
+   "site": "dev_device",
+   "store_label": "saq_payload_v1-live-store",
+   "all_six_match_manifest": true,
+   "per_file": {
+    "config_asisten.json": true,
+    "config_global.json": true,
+    "courses.json": true,
+    "lecturers.json": true,
+    "reports.json": true,
+    "schedules.json": true
+   }
+  },
+  {
+   "run_id": "server-lanjut-20261117003513-530f751",
+   "site": "saq_server",
+   "store_label": "saq_payload_v1-live-store",
+   "all_six_match_manifest": true,
+   "per_file": {
+    "config_asisten.json": true,
+    "config_global.json": true,
+    "courses.json": true,
+    "lecturers.json": true,
+    "reports.json": true,
+    "schedules.json": true
+   }
+  },
+  {
+   "run_id": "ON-DISK",
+   "site": "-",
+   "store_label": "corpus files",
+   "all_six_match_manifest": true,
+   "per_file": {
+    "config_asisten.json": true,
+    "config_global.json": true,
+    "courses.json": true,
+    "lecturers.json": true,
+    "reports.json": true,
+    "schedules.json": true
+   }
+  }
+ ]
+}
