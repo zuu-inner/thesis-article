@@ -3,3 +3,4 @@
 data/bib/*.bib text eol=lf
 data/bib/*.json text eol=lf
 data/json/*.json text eol=lf
+drafts/final-audit/*.json text eol=lf
