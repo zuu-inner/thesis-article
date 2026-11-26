@@ -418,8 +418,11 @@ def main() -> None:
                                  meta.get("KEYWORDS", "").split(";") if k.strip()]
     dois = [d for d in (ref_doi(p) for k, p in blocks if k == "para") if d]
     m["document"]["cites"] = dois
-    OUT_META.write_text(json.dumps(m, indent=1, ensure_ascii=False) + "\n",
-                        encoding="utf-8")
+    OUT_META.write_text(
+        json.dumps(m, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(f"metadata updated: title, {len(m['document']['keywords'])} keywords, "
           f"{len(dois)} cites -> {OUT_META.relative_to(ROOT)}")
 

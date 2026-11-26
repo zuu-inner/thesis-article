@@ -48,8 +48,11 @@ def main() -> None:
             "title": "Parsing gigabytes of JSON per second", "year": 2019,
             "container": "The VLDB Journal",
         })
-        CROSSREF.write_text(json.dumps(cr, indent=1, ensure_ascii=False) + "\n",
-                            encoding="utf-8")
+        CROSSREF.write_text(
+            json.dumps(cr, indent=1, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
     print(f"registry fixed: {DOI}")
 
 

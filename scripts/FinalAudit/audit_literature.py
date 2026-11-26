@@ -70,8 +70,11 @@ def main() -> None:
         "rows": rows,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
-                   encoding="utf-8")
+    OUT.write_text(
+        json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({k: v for k, v in summary.items() if k != "rows"}, indent=1))
     print("intro journal refs:", [r["n"] for r in rows if r["is_journal"] and r["in_intro"]])
     print(f"-> {OUT.relative_to(ROOT)}")

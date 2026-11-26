@@ -36,8 +36,11 @@ def main() -> None:
         "sign_wilcoxon_in_manuscript": False,
         "bca_sensitivity_cells": sum(1 for d in details if "bca_CI" in d),
     }
-    OUT_JSON.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
-                        encoding="utf-8")
+    OUT_JSON.write_text(
+        json.dumps(summary, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
     lines = [
         "# Stage 3 — Statistical Audit",
@@ -135,7 +138,7 @@ def main() -> None:
         "(claim-by-claim audit) is authorized.",
     ]
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(ROOT)} and {OUT_JSON.relative_to(ROOT)}")
 
 
