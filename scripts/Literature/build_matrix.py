@@ -1,152 +1,73 @@
 #!/usr/bin/env python3
-"""Build article/drafts/literature-matrix.csv + article/drafts/crossref_verify.json.
+"""Build the canonical literature matrix and DOI registry for the article.
 
-Rebuilds the literature matrix from assets/bib/cites.bib (51 entries) and
-verifies every DOI against Crossref (fallback DataCite for arXiv-style DOIs).
-Include/exclude decisions are curated here, documented per row, and never
-derived from bibliometric scores alone.
-
-Read-only with respect to the bibliography: this script never edits
-assets/bib/cites.bib.
-
-CSV columns (13):
-  bib_key, doi, title, year, venue, venue_type, include_status,
-  decision_reason, article_role, crossref_registry, crossref_status,
-  crossref_title_match, crossref_year_match
+The canonical registry remains in the research workspace.  This script applies
+the article's explicit selection manifest, verifies every DOI against Crossref
+(or DataCite for DOI-registered preprints), and writes derived article data.
 """
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import re
+import subprocess
+import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
-import os
+from datetime import date
 from pathlib import Path
 
-ROOT = Path(os.environ.get("THESIS_WORKSPACE_ROOT", Path(__file__).resolve().parents[3])).resolve()
-BIB = ROOT / "assets" / "bib" / "cites.bib"
-OUT_CSV = ROOT / "article" / "drafts" / "literature-matrix.csv"
-OUT_JSON = ROOT / "article" / "drafts" / "crossref_verify.json"
+from bibliography import (
+    ARTICLE_ROOT,
+    canonical_path,
+    load_manifest,
+    parse_bib_text,
+    selection_path,
+    validate_selection,
+    workspace_root,
+)
+
+CANONICAL_REPOSITORY = "https://github.com/zuudevs/thesis.git"
 MAILTO = "rafizuhayr001@gmail.com"
-UA = f"thesis-literature-audit/1.0 (mailto:{MAILTO})"
-
-# --- curated include/exclude decisions (key -> (status, reason, role)) -------
-INCLUDE = {
-    # core: on-demand JSON + parser-technique lineage
-    "10.1002_spe.3313": ("INCLUDE", "core basis: on-demand JSON parsing design (lazy materialization)", "intro+methods"),
-    "10.48550_arXiv.1902.08318": ("INCLUDE", "simdjson: SIMD JSON parsing lineage; cite published VLDB Journal version 10.1007/s00778-019-00578-5 in manuscript", "intro+methods"),
-    "10.14778_3115404.3115416": ("INCLUDE", "Mison: structural index + projection pushdown", "intro+methods"),
-    "10.14778_3236187.3236207": ("INCLUDE", "Sparser: raw filtering before parse", "intro"),
-    "10.14778_3436905.3436926": ("INCLUDE", "Pison: scalable structural index construction", "intro"),
-    "10.14778_3137765.3137782": ("INCLUDE", "FAD.js: JIT speculative selective access in JS/Node", "intro+methods"),
-    "10.1145_3503222.3507719": ("INCLUDE", "JSONSki: streaming fast-forwarding (top-venue ASPLOS, CPU)", "intro"),
-    "10.1145_3297858.3304008": ("INCLUDE", "JPStream: query-parse joint compilation (top-venue ASPLOS, CPU)", "intro"),
-    "10.1145_3623278.3624754": ("INCLUDE", "SIMD JSONPath with descendants (top-venue ASPLOS, CPU)", "related-work"),
-    "10.1145_3448016.3452809": ("INCLUDE", "JSON Tiles: JSON analytics in relational engines", "intro"),
-    "10.14778_3778092.3778109": ("INCLUDE", "streaming JSON schema validation (memory angle)", "related-work"),
-    "10.14778_3746405.3746439": ("INCLUDE", "GpJSON: JSON processing across hardware (PVLDB)", "related-work"),
-    # scalar/text pipeline components cited by ze_json lookups (@cite)
-    "10.1002_spe.2984": ("INCLUDE", "number parsing at GB/s; source of lookups tables @cite", "methods"),
-    "10.1002_spe.2920": ("INCLUDE", "UTF-8 validation lookup tables @cite", "methods"),
-    "10.1002_spe.3296": ("INCLUDE", "URL parsing: vectorized scalar family adopted by Node.js", "intro"),
-    "10.1002_spe.3396": ("INCLUDE", "DNS records parsing: SIMD text-parsing lineage", "intro"),
-    "10.1002_spe.3261": ("INCLUDE", "UTF-8/16 transcoding AVX-512, adopted by Node.js", "intro"),
-    "10.1002_spe.3036": ("INCLUDE", "transcoding billions of chars/s: SIMD text pipeline", "intro"),
-    "10.1002_spe.2777": ("INCLUDE", "Base64 at memcpy speed: SIMD scalar pipeline", "intro"),
-    "10.1002_spe.70105": ("INCLUDE", "ill-formed UTF-16 fixing, integrated in V8", "intro"),
-    "10.1145_3859286": ("INCLUDE", "forgiving Base64 decoding, Node.js 25 integration", "intro"),
-    # WebAssembly performance context (server/Node relevance)
-    "10.1145_3487552.3487827": ("INCLUDE", "wasm vs JS performance study (IMC): environment variance", "intro+discussion"),
-    "10.1145_3744916.3764533": ("INCLUDE", "wasm usage in Node.js empirical study (ICSE)", "intro+discussion"),
-    "10.1145_3714465": ("INCLUDE", "wasm runtime research survey (TOSEM)", "intro"),
-    "10.1145_3736169": ("INCLUDE", "wasm benchmarking on embedded (TACO): overhead context", "related-work"),
-    "10.1145_3760387": ("INCLUDE", "Wasm-IO: server-side wasm beyond web (ACM TECS)", "related-work"),
-    # methodology
-    "10.1145_2807591.2807644": ("INCLUDE", "scientific benchmarking discipline (report medians/CI/variability); sole pre-2016 exception per year policy", "methods+stats"),
-    # standard
-    "10.17487_RFC8259": ("INCLUDE", "JSON format standard: compliance requirement", "methods"),
-}
-
-EXCLUDE = {
-    "10.51219_JAIMLD_chakradhar-avinash-devarapalli_63": ("EXCLUDE", "venue quality: non-indexed venue, editorial standard below article bar", ""),
-    "10.47852_bonviewAAES52024965": ("EXCLUDE", "venue quality: publisher with questionable editorial standards", ""),
-    "10.31649_vitce_2.2026.121": ("EXCLUDE", "venue quality/indexing below article bar", ""),
-    "10.1109_ICHCI67614.2025.11292539": ("EXCLUDE", "scope: browser micro-benchmark (matrix ops), peripheral to server JSON", ""),
-    "10.48550_arXiv.2205.05464": ("EXCLUDE", "hardware: FPGA filtering, outside CPU/wasm scope", ""),
-    "10.1145_3533737.3535094": ("EXCLUDE", "hardware: FPGA pipeline, outside CPU/wasm scope", ""),
-    "10.1109_ASP-DAC66049.2026.11420760": ("EXCLUDE", "hardware: custom accelerator, outside software scope", ""),
-    "10.1109_RTAS68450.2026.00024": ("EXCLUDE", "scope: worst-case execution time, embedded RT", ""),
-    "10.1145_3733812.3765536": ("EXCLUDE", "scope: memory-safety tagging, security", ""),
-    "10.1145_3426422.3426978": ("EXCLUDE", "scope: delimited continuations, language runtime", ""),
-    "10.1109_SSE62657.2024.00054": ("EXCLUDE", "scope: WASI internals analysis", ""),
-    "10.1109_CLOUD49709.2020.00056": ("EXCLUDE", "scope: edge wasm OS", ""),
-    "10.1145_3572848.3577436": ("EXCLUDE", "scope: HPC MPI distribution", ""),
-    "10.1109_ASE56229.2023.00088": ("EXCLUDE", "scope: differential testing of wasm runtimes", ""),
-    "10.1109_ICT4S55073.2022.00014": ("EXCLUDE", "scope: energy measurement (energy not studied here)", ""),
-    "10.1145_3593434.3593454": ("EXCLUDE", "scope: IoT energy/perf (device class)", ""),
-    "10.48550_arXiv.2512.00035": ("EXCLUDE", "scope: IoT microcontrollers", ""),
-    "10.1109_CLEI53233.2021.9640153": ("EXCLUDE", "scope: generic non-web evaluation", ""),
-    "10.5753_sbesc_estendido.2020.13102": ("EXCLUDE", "scope: IoT JS performance", ""),
-    "10.1109_IcETRAN62308.2024.10645198": ("EXCLUDE", "scope: generic web wasm applications", ""),
-    "10.1109_PMBS56514.2022.00011": ("EXCLUDE", "scope: hardware counter metrics (not used: no counters measured)", ""),
-    "10.1145_3611643.3616311": ("EXCLUDE", "scope: compiler inlining effects, orthogonal", ""),
-    "simdjson-data": ("EXCLUDE", "data artifact (GitHub corpus), not cited literature; not used as corpus here", ""),
-}
-
-VENUE_TYPE = {"article": "journal", "inproceedings": "proceedings",
-              "misc": "standard-or-misc"}
+USER_AGENT = f"thesis-literature-audit/1.0 (mailto:{MAILTO})"
+DEFAULT_MATRIX = ARTICLE_ROOT / "data" / "csv" / "literature-matrix.csv"
+DEFAULT_REGISTRY = ARTICLE_ROOT / "data" / "json" / "crossref_verify.json"
 
 
-def parse_bib(path: Path) -> list[dict]:
-    text = path.read_text(encoding="utf-8")
-    entries: list[dict] = []
-    kind = None
-    cur: dict | None = None
-    buf_key = None
-    for raw in text.splitlines():
-        line = raw.strip()
-        m = re.match(r"@(\w+)\{([^,]+),", line)
-        if m:
-            if cur:
-                entries.append(cur)
-            kind = m.group(1).lower()
-            buf_key = m.group(2).strip()
-            cur = {"key": buf_key, "kind": kind, "fields": {}}
-            continue
-        if cur is None:
-            continue
-        if line == "}":
-            entries.append(cur)
-            cur = None
-            continue
-        fm = re.match(r"(\w+)\s*=\s*(.*)", line)
-        if fm and cur is not None:
-            field = fm.group(1).lower()
-            val = fm.group(2).rstrip().rstrip(",")
-            val = val.strip("{}").strip()
-            cur["fields"][field] = val
-    if cur:
-        entries.append(cur)
-    return entries
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source-commit", required=True)
+    parser.add_argument("--canonical", type=Path, default=None)
+    parser.add_argument("--manifest", type=Path, default=None)
+    parser.add_argument("--matrix", type=Path, default=DEFAULT_MATRIX)
+    parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
+    parser.add_argument("--refresh", action="store_true", help="Re-query every DOI")
+    parser.add_argument(
+        "--refresh-doi",
+        action="append",
+        default=[],
+        help="Re-query only this DOI (repeatable)",
+    )
+    return parser.parse_args()
 
 
-def norm(s: str) -> str:
-    s = re.sub(r"<[^>]+>", "", s)  # strip crossref markup (e.g. <scp>)
-    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+def git_output(root: Path, *args: str) -> bytes:
+    return subprocess.check_output(["git", "-C", str(root), *args], stderr=subprocess.PIPE)
 
 
-def fetch(url: str, timeout: int = 30) -> dict | None:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+def fetch_json(url: str, timeout: int = 30) -> dict | None:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            if e.code in (404, 410):
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code in (404, 410):
                 return None
-            if e.code == 429:
+            if error.code == 429 or error.code in (500, 502, 503, 504):
                 time.sleep(2 * (attempt + 1))
                 continue
             return None
@@ -155,128 +76,281 @@ def fetch(url: str, timeout: int = 30) -> dict | None:
     return None
 
 
-def verify(doi: str) -> dict:
-    out = {"doi": doi, "registry": None, "status": None, "title": None,
-           "year": None, "container": None}
-    cr = fetch(f"https://api.crossref.org/works/{doi}?mailto={MAILTO}")
-    if cr is not None:
-        msg = cr.get("message", {})
-        out["registry"] = "crossref"
-        title = (msg.get("title") or [""])[0]
+def normalize(value: str) -> str:
+    value = re.sub(r"<[^>]+>", "", value)
+    value = re.sub(r"\\[a-zA-Z]+\s*", " ", value)
+    value = value.replace("{", " ").replace("}", " ")
+    return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+
+def verify_doi(doi: str) -> dict:
+    encoded = urllib.parse.quote(doi, safe="")
+    crossref = fetch_json(
+        f"https://api.crossref.org/works/{encoded}?mailto={urllib.parse.quote(MAILTO)}"
+    )
+    if crossref is not None:
+        message = crossref.get("message", {})
         year = None
-        if msg.get("issued", {}).get("date-parts"):
-            year = msg["issued"]["date-parts"][0][0]
-        container = (msg.get("container-title") or [""])
-        out.update(status="found", title=title, year=year,
-                   container=container[0] if container else None)
-        return out
-    dc = fetch(f"https://api.datacite.org/dois/{doi}")
-    if dc is not None:
-        attrs = dc.get("data", {}).get("attributes", {})
-        titles = attrs.get("titles") or [{}]
-        out.update(registry="datacite", status="found",
-                   title=titles[0].get("title"),
-                   year=attrs.get("publicationYear"),
-                   container=attrs.get("publisher"))
-        return out
-    out["status"] = "not-found"
-    return out
-
-
-def main() -> None:
-    entries = parse_bib(BIB)
-    print(f"bib entries parsed: {len(entries)}")
-
-    rows: list[dict] = []
-    verify_cache: dict[str, dict] = {}
-
-    for e in entries:
-        key = e["key"]
-        f = e["fields"]
-        doi = f.get("doi", "")
-        title = f.get("title", "")
-        year_raw = f.get("year", "")
-        m = re.search(r"\d{4}", year_raw)
-        year = int(m.group(0)) if m else None
-        venue = f.get("journal") or f.get("booktitle") or f.get("howpublished") \
-            or f.get("publisher") or ""
-        vtype = VENUE_TYPE.get(e["kind"], "misc")
-
-        dec = INCLUDE.get(key) or EXCLUDE.get(key) or \
-            ("UNRESOLVED", "no curated decision — review manually", "")
-        status, reason, role = dec
-
-        row = {
-            "bib_key": key,
+        for date_field in ("published-print", "published", "issued"):
+            date_parts = (message.get(date_field) or {}).get("date-parts") or []
+            if date_parts and date_parts[0]:
+                year = date_parts[0][0]
+                break
+        containers = message.get("container-title") or []
+        return {
             "doi": doi,
-            "title": title,
-            "year": year if year is not None else "",
-            "venue": venue,
-            "venue_type": vtype,
-            "include_status": status,
-            "decision_reason": reason,
-            "article_role": role,
-            "crossref_registry": "",
-            "crossref_status": "",
-            "crossref_title_match": "",
-            "crossref_year_match": "",
+            "registry": "crossref",
+            "status": "found",
+            "title": (message.get("title") or [""])[0],
+            "year": year,
+            "container": containers[0] if containers else None,
+            "volume": message.get("volume"),
+            "issue": message.get("issue"),
+            "page": message.get("page"),
+            "url": message.get("URL"),
         }
 
-        if doi:
-            if doi not in verify_cache:
-                verify_cache[doi] = verify(doi)
-                time.sleep(0.4)  # polite rate
-            v = verify_cache[doi]
-            row["crossref_registry"] = v["registry"] or ""
-            row["crossref_status"] = v["status"]
-            if v["status"] == "found":
-                t_ok = bool(v["title"]) and (
-                    norm(v["title"])[:40] in norm(title) or
-                    norm(title)[:40] in norm(v["title"]))
-                y_ok = (v["year"] is not None and year is not None
-                        and abs(int(v["year"]) - year) <= 1)
-                row["crossref_title_match"] = "ok" if t_ok else "mismatch"
-                row["crossref_year_match"] = "ok" if y_ok else "mismatch"
-            else:
-                row["crossref_title_match"] = "n/a"
-                row["crossref_year_match"] = "n/a"
+    datacite = fetch_json(f"https://api.datacite.org/dois/{encoded}")
+    if datacite is not None:
+        attributes = datacite.get("data", {}).get("attributes", {})
+        titles = attributes.get("titles") or [{}]
+        return {
+            "doi": doi,
+            "registry": "datacite",
+            "status": "found",
+            "title": titles[0].get("title"),
+            "year": attributes.get("publicationYear"),
+            "container": attributes.get("publisher"),
+            "volume": None,
+            "issue": None,
+            "page": None,
+            "url": attributes.get("url"),
+        }
+
+    return {
+        "doi": doi,
+        "registry": None,
+        "status": "not-found",
+        "title": None,
+        "year": None,
+        "container": None,
+        "volume": None,
+        "issue": None,
+        "page": None,
+        "url": None,
+    }
+
+
+def title_matches(bib_title: str, registry_title: str | None) -> str:
+    if not registry_title:
+        return "n/a"
+    left = normalize(bib_title)
+    right = normalize(registry_title)
+    if not left or not right:
+        return "mismatch"
+    if left[:40] in right or right[:40] in left:
+        return "ok"
+    left_tokens = set(left.split())
+    right_tokens = set(right.split())
+    overlap = len(left_tokens & right_tokens) / max(1, len(left_tokens | right_tokens))
+    return "ok" if overlap >= 0.75 else "mismatch"
+
+
+def year_matches(bib_year: int | None, registry_year: int | None) -> str:
+    if bib_year is None or registry_year is None:
+        return "n/a"
+    return "ok" if abs(bib_year - registry_year) <= 1 else "mismatch"
+
+
+def entry_year(entry) -> int | None:
+    value = entry.fields.get("year")
+    match = re.search(r"\d{4}", value or "")
+    return int(match.group(0)) if match else None
+
+
+def main() -> int:
+    args = parse_args()
+    root = workspace_root()
+    canonical = (args.canonical or canonical_path(root)).resolve()
+    manifest_file = (args.manifest or selection_path()).resolve()
+    matrix_path = args.matrix.resolve()
+    registry_path = args.registry.resolve()
+
+    canonical.relative_to(root)
+    relative_path = canonical.relative_to(root).as_posix()
+    commit = git_output(
+        root, "rev-parse", "--verify", f"{args.source_commit}^{{commit}}"
+    ).decode("ascii").strip()
+    canonical_text = git_output(root, "show", f"{commit}:{relative_path}").decode("utf-8")
+    entries = parse_bib_text(canonical_text)
+    manifest = load_manifest(manifest_file)
+    selected, excluded = validate_selection(entries, manifest)
+
+    selected_by_key = {entry.key: entry for entry in selected}
+    excluded_by_key = {entry.key: entry for entry in excluded}
+    selected_items = {item["key"]: item for item in manifest["selected"]}
+    excluded_items = {item["key"]: item for item in manifest["excluded"]}
+
+    cached: dict[str, dict] = {}
+    if registry_path.exists() and not args.refresh:
+        existing = json.loads(registry_path.read_text(encoding="utf-8"))
+        cached = {
+            result["doi"].lower(): result
+            for result in existing.get("results", [])
+            if result.get("doi")
+        }
+
+    refresh_dois = {doi.lower() for doi in args.refresh_doi}
+    verify_cache: dict[str, dict] = {}
+    for entry in entries:
+        doi = entry.doi
+        if not doi:
+            continue
+        key = doi.lower()
+        if key in cached and key not in refresh_dois and cached[key].get("status") == "found":
+            verify_cache[key] = cached[key]
         else:
-            row["crossref_status"] = "doi-missing"
-            row["crossref_title_match"] = "n/a"
-            row["crossref_year_match"] = "n/a"
-        rows.append(row)
+            verify_cache[key] = verify_doi(doi)
+            time.sleep(0.25)
 
-    cols = ["bib_key", "doi", "title", "year", "venue", "venue_type",
-            "include_status", "decision_reason", "article_role",
-            "crossref_registry", "crossref_status", "crossref_title_match",
-            "crossref_year_match"]
-    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUT_CSV, "w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=cols)
-        w.writeheader()
-        w.writerows(rows)
-    with open(OUT_JSON, "w", encoding="utf-8") as fh:
-        json.dump({"schema_version": "1.0.0",
-                   "kind": "crossref_verification",
-                   "date": "2026-11-18",
-                   "results": list(verify_cache.values())},
-                  fh, indent=2, ensure_ascii=False)
+    rows: list[dict[str, object]] = []
+    for entry in entries:
+        fields = entry.fields
+        doi = entry.doi or ""
+        title = fields.get("title", "")
+        year = entry_year(entry)
+        venue = (
+            fields.get("journal")
+            or fields.get("booktitle")
+            or fields.get("howpublished")
+            or fields.get("publisher")
+            or ""
+        )
+        venue_type = {
+            "article": "journal",
+            "inproceedings": "proceedings",
+            "misc": "standard-or-misc",
+        }.get(entry.kind, "misc")
 
-    inc = sum(1 for r in rows if r["include_status"] == "INCLUDE")
-    exc = sum(1 for r in rows if r["include_status"] == "EXCLUDE")
-    ok = sum(1 for r in rows if r["crossref_status"] == "found")
-    mismatch = sum(1 for r in rows if "mismatch" in (r["crossref_title_match"],
-                                                     r["crossref_year_match"]))
-    print(f"rows: {len(rows)} | INCLUDE {inc} | EXCLUDE {exc} | "
-          f"crossref found {ok} | mismatches {mismatch}")
-    for r in rows:
-        if r["crossref_status"] != "found" or "mismatch" in (
-                r["crossref_title_match"], r["crossref_year_match"]):
-            print(f"  CHECK: {r['bib_key']} doi={r['doi'] or '-'} "
-                  f"status={r['crossref_status']} "
-                  f"title={r['crossref_title_match']} "
-                  f"year={r['crossref_year_match']}")
+        if entry.key in selected_by_key:
+            decision = selected_items[entry.key]
+            include_status = "INCLUDE"
+            reason = decision["reason"]
+            role = decision.get("role", "")
+        else:
+            decision = excluded_items[entry.key]
+            include_status = "EXCLUDE"
+            reason = decision["reason"]
+            role = ""
+
+        verification = verify_cache.get(doi.lower()) if doi else None
+        if verification:
+            registry = verification.get("registry") or ""
+            status = verification.get("status") or "not-found"
+            title_match = title_matches(title, verification.get("title"))
+            year_match = year_matches(year, verification.get("year"))
+        else:
+            registry = ""
+            status = "doi-missing"
+            title_match = "n/a"
+            year_match = "n/a"
+
+        rows.append(
+            {
+                "bib_key": entry.key,
+                "doi": doi,
+                "title": title,
+                "year": year if year is not None else "",
+                "venue": venue,
+                "venue_type": venue_type,
+                "include_status": include_status,
+                "decision_reason": reason,
+                "article_role": role,
+                "crossref_registry": registry,
+                "crossref_status": status,
+                "crossref_title_match": title_match,
+                "crossref_year_match": year_match,
+                "canonical_commit": commit,
+            }
+        )
+
+    columns = [
+        "bib_key",
+        "doi",
+        "title",
+        "year",
+        "venue",
+        "venue_type",
+        "include_status",
+        "decision_reason",
+        "article_role",
+        "crossref_registry",
+        "crossref_status",
+        "crossref_title_match",
+        "crossref_year_match",
+        "canonical_commit",
+    ]
+    matrix_path.parent.mkdir(parents=True, exist_ok=True)
+    with matrix_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    results = [verify_cache[key] for key in sorted(verify_cache)]
+    registry_payload = {
+        "schema_version": "1.1.0",
+        "kind": "crossref_verification",
+        "date": date.today().isoformat(),
+        "source": {
+            "repository": CANONICAL_REPOSITORY,
+            "commit": commit,
+            "path": relative_path,
+            "entry_count": len(entries),
+        },
+        "results": results,
+    }
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+    registry_path.write_text(
+        json.dumps(registry_payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
+    included = sum(row["include_status"] == "INCLUDE" for row in rows)
+    excluded_count = sum(row["include_status"] == "EXCLUDE" for row in rows)
+    found = sum(row["crossref_status"] == "found" for row in rows)
+    mismatches = [
+        row
+        for row in rows
+        if row["crossref_status"] == "found"
+        and (
+            row["crossref_title_match"] == "mismatch"
+            or row["crossref_year_match"] == "mismatch"
+        )
+    ]
+    selected_missing = [
+        row
+        for row in rows
+        if row["include_status"] == "INCLUDE"
+        and row["doi"]
+        and row["crossref_status"] != "found"
+    ]
+
+    print(
+        f"rows: {len(rows)} | INCLUDE {included} | EXCLUDE {excluded_count} | "
+        f"DOI found {found}/{len(verify_cache)} | mismatches {len(mismatches)}"
+    )
+    for row in mismatches:
+        print(
+            f"  CHECK: {row['bib_key']} title={row['crossref_title_match']} "
+            f"year={row['crossref_year_match']}"
+        )
+    if selected_missing:
+        for row in selected_missing:
+            print(f"  MISSING: {row['bib_key']} doi={row['doi']} status={row['crossref_status']}")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

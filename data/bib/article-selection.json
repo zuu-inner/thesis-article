@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "bibliography_selection",
+  "canonical_source": "assets/bib/cites.bib",
+  "policy": {
+    "selection_rule": "A canonical entry is included only when it is cited by the article manuscript or directly supports the manuscript methodology and interpretation.",
+    "ordering": "reference number follows the final manuscript reference list.",
+    "snapshot_order": "Generated in canonical registry order for reproducible filtering.",
+    "provenance_requirement": "The generated snapshot sidecar records canonical commit, canonical SHA-256, selection-manifest SHA-256, and snapshot SHA-256."
+  },
+  "selected": [
+    {
+      "reference": 1,
+      "key": "10.17487_RFC8259",
+      "doi": "10.17487/RFC8259",
+      "reason": "JSON format standard: compliance requirement",
+      "role": "methods"
+    },
+    {
+      "reference": 2,
+      "key": "10.1002_spe.3313",
+      "doi": "10.1002/spe.3313",
+      "reason": "core basis: on-demand JSON parsing design (lazy materialization)",
+      "role": "intro+methods"
+    },
+    {
+      "reference": 3,
+      "key": "10.1007_s00778-019-00578-5",
+      "doi": "10.1007/s00778-019-00578-5",
+      "reason": "published journal version of simdjson; replaces arXiv in manuscript [3]",
+      "role": "intro+methods"
+    },
+    {
+      "reference": 4,
+      "key": "10.14778_3115404.3115416",
+      "doi": "10.14778/3115404.3115416",
+      "reason": "Mison: structural index + projection pushdown",
+      "role": "intro+methods"
+    },
+    {
+      "reference": 5,
+      "key": "10.14778_3236187.3236207",
+      "doi": "10.14778/3236187.3236207",
+      "reason": "Sparser: raw filtering before parse",
+      "role": "intro"
+    },
+    {
+      "reference": 6,
+      "key": "10.1145_3503222.3507719",
+      "doi": "10.1145/3503222.3507719",
+      "reason": "JSONSki: streaming fast-forwarding (top-venue ASPLOS, CPU)",
+      "role": "intro"
+    },
+    {
+      "reference": 7,
+      "key": "10.1145_3297858.3304008",
+      "doi": "10.1145/3297858.3304008",
+      "reason": "JPStream: query-parse joint compilation (top-venue ASPLOS, CPU)",
+      "role": "intro"
+    },
+    {
+      "reference": 8,
+      "key": "10.14778_3436905.3436926",
+      "doi": "10.14778/3436905.3436926",
+      "reason": "Pison: scalable structural index construction",
+      "role": "intro"
+    },
+    {
+      "reference": 9,
+      "key": "10.14778_3137765.3137782",
+      "doi": "10.14778/3137765.3137782",
+      "reason": "FAD.js: JIT speculative selective access in JS/Node",
+      "role": "intro+methods"
+    },
+    {
+      "reference": 10,
+      "key": "10.1145_3448016.3452809",
+      "doi": "10.1145/3448016.3452809",
+      "reason": "JSON Tiles: JSON analytics in relational engines",
+      "role": "intro"
+    },
+    {
+      "reference": 11,
+      "key": "10.14778_3746405.3746439",
+      "doi": "10.14778/3746405.3746439",
+      "reason": "GpJSON: JSON processing across hardware (PVLDB)",
+      "role": "related-work"
+    },
+    {
+      "reference": 12,
+      "key": "10.1145_3623278.3624754",
+      "doi": "10.1145/3623278.3624754",
+      "reason": "SIMD JSONPath with descendants (top-venue ASPLOS, CPU)",
+      "role": "related-work"
+    },
+    {
+      "reference": 13,
+      "key": "10.14778_3778092.3778109",
+      "doi": "10.14778/3778092.3778109",
+      "reason": "streaming JSON schema validation (memory angle)",
+      "role": "related-work"
+    },
+    {
+      "reference": 14,
+      "key": "10.1016_j.is.2019.101478",
+      "doi": "10.1016/j.is.2019.101478",
+      "reason": "formal JSON data model and query-language foundation",
+      "role": "related-work"
+    },
+    {
+      "reference": 15,
+      "key": "10.1016_j.is.2025.102537",
+      "doi": "10.1016/j.is.2025.102537",
+      "reason": "JSON document algebra for query optimization",
+      "role": "related-work"
+    },
+    {
+      "reference": 16,
+      "key": "10.1007_s11280-025-01336-0",
+      "doi": "10.1007/s11280-025-01336-0",
+      "reason": "JSON data model and query algebra for optimizer context",
+      "role": "related-work"
+    },
+    {
+      "reference": 17,
+      "key": "10.1016_j.is.2020.101686",
+      "doi": "10.1016/j.is.2020.101686",
+      "reason": "succinct representation and query support for JSON documents",
+      "role": "related-work"
+    },
+    {
+      "reference": 18,
+      "key": "10.1145_3321704",
+      "doi": "10.1145/3321704",
+      "reason": "scan-optimized columnar storage for nested records",
+      "role": "related-work"
+    },
+    {
+      "reference": 19,
+      "key": "10.14778_3611479.3611481",
+      "doi": "10.14778/3611479.3611481",
+      "reason": "reasoning and query rewriting over JSON document stores",
+      "role": "related-work"
+    },
+    {
+      "reference": 20,
+      "key": "10.1145_3588957",
+      "doi": "10.1145/3588957",
+      "reason": "distributed SQL JSON processor and selective parsing",
+      "role": "related-work"
+    },
+    {
+      "reference": 21,
+      "key": "10.1002_spe.2984",
+      "doi": "10.1002/spe.2984",
+      "reason": "number parsing at GB/s; source of lookups tables @cite",
+      "role": "methods"
+    },
+    {
+      "reference": 22,
+      "key": "10.1002_spe.2920",
+      "doi": "10.1002/spe.2920",
+      "reason": "UTF-8 validation lookup tables @cite",
+      "role": "methods"
+    },
+    {
+      "reference": 23,
+      "key": "10.1002_spe.3296",
+      "doi": "10.1002/spe.3296",
+      "reason": "URL parsing: vectorized scalar family adopted by Node.js",
+      "role": "intro"
+    },
+    {
+      "reference": 24,
+      "key": "10.1002_spe.3396",
+      "doi": "10.1002/spe.3396",
+      "reason": "DNS records parsing: SIMD text-parsing lineage",
+      "role": "intro"
+    },
+    {
+      "reference": 25,
+      "key": "10.1002_spe.3261",
+      "doi": "10.1002/spe.3261",
+      "reason": "UTF-8/16 transcoding AVX-512, adopted by Node.js",
+      "role": "intro"
+    },
+    {
+      "reference": 26,
+      "key": "10.1002_spe.3036",
+      "doi": "10.1002/spe.3036",
+      "reason": "transcoding billions of chars/s: SIMD text pipeline",
+      "role": "intro"
+    },
+    {
+      "reference": 27,
+      "key": "10.1002_spe.2777",
+      "doi": "10.1002/spe.2777",
+      "reason": "Base64 at memcpy speed: SIMD scalar pipeline",
+      "role": "intro"
+    },
+    {
+      "reference": 28,
+      "key": "10.1002_spe.70105",
+      "doi": "10.1002/spe.70105",
+      "reason": "ill-formed UTF-16 fixing, integrated in V8",
+      "role": "intro"
+    },
+    {
+      "reference": 29,
+      "key": "10.1145_3859286",
+      "doi": "10.1145/3859286",
+      "reason": "forgiving Base64 decoding, Node.js 25 integration",
+      "role": "intro"
+    },
+    {
+      "reference": 30,
+      "key": "10.1145_3712197",
+      "doi": "10.1145/3712197",
+      "reason": "wasm container runtime measurement (C1; replaces IMC 2021)",
+      "role": "intro+discussion"
+    },
+    {
+      "reference": 31,
+      "key": "10.1007_s10723-023-09669-8",
+      "doi": "10.1007/s10723-023-09669-8",
+      "reason": "server-side/serverless Wasm runtime benchmark (D2b; replaces Wasm-IO)",
+      "role": "related-work"
+    },
+    {
+      "reference": 32,
+      "key": "10.1145_3744916.3764533",
+      "doi": "10.1145/3744916.3764533",
+      "reason": "wasm usage in Node.js empirical study (ICSE)",
+      "role": "intro+discussion"
+    },
+    {
+      "reference": 33,
+      "key": "10.1145_3714465",
+      "doi": "10.1145/3714465",
+      "reason": "wasm runtime research survey (TOSEM)",
+      "role": "intro"
+    },
+    {
+      "reference": 34,
+      "key": "10.1145_3736169",
+      "doi": "10.1145/3736169",
+      "reason": "wasm benchmarking on embedded (TACO): overhead context",
+      "role": "related-work"
+    },
+    {
+      "reference": 35,
+      "key": "10.1145_3498688",
+      "doi": "10.1145/3498688",
+      "reason": "near-zero-cost WebAssembly and SFI transition overhead",
+      "role": "intro+discussion"
+    },
+    {
+      "reference": 36,
+      "key": "10.3390_fi16090341",
+      "doi": "10.3390/fi16090341",
+      "reason": "efficient WebAssembly module data exchange",
+      "role": "related-work"
+    },
+    {
+      "reference": 37,
+      "key": "10.1109_access.2026.3732375",
+      "doi": "10.1109/access.2026.3732375",
+      "reason": "WebAssembly streaming I/O cost decomposition",
+      "role": "intro+discussion"
+    },
+    {
+      "reference": 38,
+      "key": "10.1145_2807591.2807644",
+      "doi": "10.1145/2807591.2807644",
+      "reason": "scientific benchmarking discipline (report medians/CI/variability); sole pre-2016 exception per year policy",
+      "role": "methods+stats"
+    },
+    {
+      "reference": 39,
+      "key": "10.1007_s10664-019-09681-1",
+      "doi": "10.1007/s10664-019-09681-1",
+      "reason": "cloud microbenchmark variability and confidence-interval methodology",
+      "role": "methods+discussion"
+    },
+    {
+      "reference": 40,
+      "key": "10.1007_s11704-018-7319-2",
+      "doi": "10.1007/s11704-018-7319-2",
+      "reason": "performance-variation-aware computer comparison methodology",
+      "role": "methods+discussion"
+    },
+    {
+      "reference": 41,
+      "key": "10.1109_LCA.2026.3730505",
+      "doi": "10.1109/LCA.2026.3730505",
+      "reason": "confidence intervals for average performance metrics",
+      "role": "methods+stats"
+    },
+    {
+      "reference": 42,
+      "key": "SchulzKumpel2025Constructing",
+      "doi": null,
+      "reason": "benchmark study for generalization-error confidence intervals",
+      "role": "methods+stats"
+    }
+  ],
+  "excluded": [
+    {
+      "key": "10.1145_3487552.3487827",
+      "doi": "10.1145/3487552.3487827",
+      "reason": "superseded_for_article_by:10.1145/3712197"
+    },
+    {
+      "key": "10.51219_JAIMLD_chakradhar-avinash-devarapalli_63",
+      "doi": "10.51219/JAIMLD/chakradhar-avinash-devarapalli/63",
+      "reason": "venue quality: non-indexed venue, editorial standard below article bar"
+    },
+    {
+      "key": "10.48550_arXiv.1902.08318",
+      "doi": "10.48550/arXiv.1902.08318",
+      "reason": "superseded_for_article_by:10.1007/s00778-019-00578-5"
+    },
+    {
+      "key": "10.1145_3572848.3577436",
+      "doi": "10.1145/3572848.3577436",
+      "reason": "scope: HPC MPI distribution"
+    },
+    {
+      "key": "10.1109_ICHCI67614.2025.11292539",
+      "doi": "10.1109/ICHCI67614.2025.11292539",
+      "reason": "scope: browser micro-benchmark (matrix ops), peripheral to server JSON"
+    },
+    {
+      "key": "10.48550_arXiv.2205.05464",
+      "doi": "10.48550/arXiv.2205.05464",
+      "reason": "hardware: FPGA filtering, outside CPU/wasm scope"
+    },
+    {
+      "key": "10.1109_ASE56229.2023.00088",
+      "doi": "10.1109/ASE56229.2023.00088",
+      "reason": "scope: differential testing of wasm runtimes"
+    },
+    {
+      "key": "10.1109_IcETRAN62308.2024.10645198",
+      "doi": "10.1109/IcETRAN62308.2024.10645198",
+      "reason": "scope: generic web wasm applications"
+    },
+    {
+      "key": "10.47852_bonviewAAES52024965",
+      "doi": "10.47852/bonviewAAES52024965",
+      "reason": "venue quality: publisher with questionable editorial standards"
+    },
+    {
+      "key": "10.48550_arXiv.2512.00035",
+      "doi": "10.48550/arXiv.2512.00035",
+      "reason": "scope: IoT microcontrollers"
+    },
+    {
+      "key": "10.1145_3533737.3535094",
+      "doi": "10.1145/3533737.3535094",
+      "reason": "hardware: FPGA pipeline, outside CPU/wasm scope"
+    },
+    {
+      "key": "10.1109_ICT4S55073.2022.00014",
+      "doi": "10.1109/ICT4S55073.2022.00014",
+      "reason": "scope: energy measurement (energy not studied here)"
+    },
+    {
+      "key": "10.1109_PMBS56514.2022.00011",
+      "doi": "10.1109/PMBS56514.2022.00011",
+      "reason": "scope: hardware counter metrics (not used: no counters measured)"
+    },
+    {
+      "key": "10.1145_3593434.3593454",
+      "doi": "10.1145/3593434.3593454",
+      "reason": "scope: IoT energy/perf (device class)"
+    },
+    {
+      "key": "10.1109_SSE62657.2024.00054",
+      "doi": "10.1109/SSE62657.2024.00054",
+      "reason": "scope: WASI internals analysis"
+    },
+    {
+      "key": "10.1145_3611643.3616311",
+      "doi": "10.1145/3611643.3616311",
+      "reason": "scope: compiler inlining effects, orthogonal"
+    },
+    {
+      "key": "10.1109_ASP-DAC66049.2026.11420760",
+      "doi": "10.1109/ASP-DAC66049.2026.11420760",
+      "reason": "hardware: custom accelerator, outside software scope"
+    },
+    {
+      "key": "10.31649_vitce_2.2026.121",
+      "doi": "10.31649/vitce/2.2026.121",
+      "reason": "venue quality/indexing below article bar"
+    },
+    {
+      "key": "10.1109_CLOUD49709.2020.00056",
+      "doi": "10.1109/CLOUD49709.2020.00056",
+      "reason": "scope: edge wasm OS"
+    },
+    {
+      "key": "10.1109_CLEI53233.2021.9640153",
+      "doi": "10.1109/CLEI53233.2021.9640153",
+      "reason": "scope: generic non-web evaluation"
+    },
+    {
+      "key": "10.5753_sbesc_estendido.2020.13102",
+      "doi": "10.5753/sbesc_estendido.2020.13102",
+      "reason": "scope: IoT JS performance"
+    },
+    {
+      "key": "10.1145_3426422.3426978",
+      "doi": "10.1145/3426422.3426978",
+      "reason": "scope: delimited continuations, language runtime"
+    },
+    {
+      "key": "10.1109_RTAS68450.2026.00024",
+      "doi": "10.1109/RTAS68450.2026.00024",
+      "reason": "scope: worst-case execution time, embedded RT"
+    },
+    {
+      "key": "10.1145_3760387",
+      "doi": "10.1145/3760387",
+      "reason": "superseded_for_article_by:10.1007/s10723-023-09669-8"
+    },
+    {
+      "key": "10.1145_3733812.3765536",
+      "doi": "10.1145/3733812.3765536",
+      "reason": "scope: memory-safety tagging, security"
+    },
+    {
+      "key": "simdjson-data",
+      "doi": null,
+      "reason": "data artifact (GitHub corpus), not cited literature; not used as corpus here"
+    }
+  ]
+}

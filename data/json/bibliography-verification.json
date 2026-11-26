@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "bibliography_snapshot_verification",
+  "source_commit": "5f2043a426e52ee5af193920bccaafcbb2dc1aab",
+  "counts": {
+    "canonical_entries": 68,
+    "selected_entries": 42,
+    "excluded_entries": 26,
+    "selected_dois": 41,
+    "registry_results": 66,
+    "manuscript_references": 42
+  },
+  "missing_registry_dois": [],
+  "checks": {
+    "canonical_commit_blob_matches_provenance": true,
+    "canonical_entry_count_matches_provenance": true,
+    "selection_manifest_hash_matches": true,
+    "selection_covers_canonical_registry": true,
+    "selection_has_42_entries": true,
+    "selection_has_41_dois": true,
+    "snapshot_hash_matches_provenance": true,
+    "snapshot_is_exact_canonical_filter": true,
+    "snapshot_entry_count_matches_provenance": true,
+    "provenance_selected_keys_match": true,
+    "provenance_excluded_keys_match": true,
+    "doi_registry_hash_matches": true,
+    "doi_registry_covers_selected_dois": true,
+    "manuscript_doi_set_matches_snapshot": true,
+    "metadata_doi_set_matches_snapshot": true,
+    "manuscript_has_42_contiguous_references": true
+  },
+  "failed_checks": []
+}

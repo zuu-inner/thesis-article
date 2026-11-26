@@ -1,0 +1,422 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "bibliography_snapshot_provenance",
+  "source": {
+    "repository": "https://github.com/zuudevs/thesis.git",
+    "commit": "5f2043a426e52ee5af193920bccaafcbb2dc1aab",
+    "path": "assets/bib/cites.bib",
+    "git_blob_oid": "6fece41ebebcd0d3a20ee74cebc3ae67e6271f92",
+    "sha256": "620a6150c5d336a7ab87f7bc6bf0f6b0d2c5219ba2faadb50b700d587a5beb4b",
+    "entry_count": 68,
+    "doi_count": 66
+  },
+  "selection": {
+    "path": "article/data/bib/article-selection.json",
+    "sha256": "b7e928d5509f188bbc43a50231a37761ff90dd8fad41941121524355b8d5710b",
+    "selected_key_count": 42,
+    "excluded_key_count": 26,
+    "selected_keys": [
+      "10.1002_spe.3313",
+      "10.1002_spe.2777",
+      "10.1145_3859286",
+      "10.1002_spe.3261",
+      "10.1002_spe.3036",
+      "10.1002_spe.3396",
+      "10.14778_3778092.3778109",
+      "10.1145_3623278.3624754",
+      "10.1145_3297858.3304008",
+      "10.1145_3503222.3507719",
+      "10.14778_3746405.3746439",
+      "10.14778_3115404.3115416",
+      "10.14778_3436905.3436926",
+      "10.14778_3236187.3236207",
+      "10.1002_spe.2984",
+      "10.1145_2807591.2807644",
+      "10.1002_spe.2920",
+      "10.17487_RFC8259",
+      "10.1145_3448016.3452809",
+      "10.14778_3137765.3137782",
+      "10.1145_3736169",
+      "10.1002_spe.3296",
+      "10.1002_spe.70105",
+      "10.1145_3714465",
+      "10.1145_3744916.3764533",
+      "10.1145_3712197",
+      "10.1007_s00778-019-00578-5",
+      "10.1007_s10723-023-09669-8",
+      "10.1016_j.is.2025.102537",
+      "10.1007_s11280-025-01336-0",
+      "10.1145_3498688",
+      "SchulzKumpel2025Constructing",
+      "10.1145_3588957",
+      "10.1109_access.2026.3732375",
+      "10.1016_j.is.2020.101686",
+      "10.1016_j.is.2019.101478",
+      "10.14778_3611479.3611481",
+      "10.1145_3321704",
+      "10.3390_fi16090341",
+      "10.1007_s10664-019-09681-1",
+      "10.1007_s11704-018-7319-2",
+      "10.1109_LCA.2026.3730505"
+    ],
+    "excluded_entries": [
+      {
+        "key": "10.1145_3487552.3487827",
+        "doi": "10.1145/3487552.3487827",
+        "reason": "superseded_for_article_by:10.1145/3712197"
+      },
+      {
+        "key": "10.51219_JAIMLD_chakradhar-avinash-devarapalli_63",
+        "doi": "10.51219/JAIMLD/chakradhar-avinash-devarapalli/63",
+        "reason": "venue quality: non-indexed venue, editorial standard below article bar"
+      },
+      {
+        "key": "10.48550_arXiv.1902.08318",
+        "doi": "10.48550/arXiv.1902.08318",
+        "reason": "superseded_for_article_by:10.1007/s00778-019-00578-5"
+      },
+      {
+        "key": "10.1145_3572848.3577436",
+        "doi": "10.1145/3572848.3577436",
+        "reason": "scope: HPC MPI distribution"
+      },
+      {
+        "key": "10.1109_ICHCI67614.2025.11292539",
+        "doi": "10.1109/ICHCI67614.2025.11292539",
+        "reason": "scope: browser micro-benchmark (matrix ops), peripheral to server JSON"
+      },
+      {
+        "key": "10.48550_arXiv.2205.05464",
+        "doi": "10.48550/arXiv.2205.05464",
+        "reason": "hardware: FPGA filtering, outside CPU/wasm scope"
+      },
+      {
+        "key": "10.1109_ASE56229.2023.00088",
+        "doi": "10.1109/ASE56229.2023.00088",
+        "reason": "scope: differential testing of wasm runtimes"
+      },
+      {
+        "key": "10.1109_IcETRAN62308.2024.10645198",
+        "doi": "10.1109/IcETRAN62308.2024.10645198",
+        "reason": "scope: generic web wasm applications"
+      },
+      {
+        "key": "10.47852_bonviewAAES52024965",
+        "doi": "10.47852/bonviewAAES52024965",
+        "reason": "venue quality: publisher with questionable editorial standards"
+      },
+      {
+        "key": "10.48550_arXiv.2512.00035",
+        "doi": "10.48550/arXiv.2512.00035",
+        "reason": "scope: IoT microcontrollers"
+      },
+      {
+        "key": "10.1145_3533737.3535094",
+        "doi": "10.1145/3533737.3535094",
+        "reason": "hardware: FPGA pipeline, outside CPU/wasm scope"
+      },
+      {
+        "key": "10.1109_ICT4S55073.2022.00014",
+        "doi": "10.1109/ICT4S55073.2022.00014",
+        "reason": "scope: energy measurement (energy not studied here)"
+      },
+      {
+        "key": "10.1109_PMBS56514.2022.00011",
+        "doi": "10.1109/PMBS56514.2022.00011",
+        "reason": "scope: hardware counter metrics (not used: no counters measured)"
+      },
+      {
+        "key": "10.1145_3593434.3593454",
+        "doi": "10.1145/3593434.3593454",
+        "reason": "scope: IoT energy/perf (device class)"
+      },
+      {
+        "key": "10.1109_SSE62657.2024.00054",
+        "doi": "10.1109/SSE62657.2024.00054",
+        "reason": "scope: WASI internals analysis"
+      },
+      {
+        "key": "10.1145_3611643.3616311",
+        "doi": "10.1145/3611643.3616311",
+        "reason": "scope: compiler inlining effects, orthogonal"
+      },
+      {
+        "key": "10.1109_ASP-DAC66049.2026.11420760",
+        "doi": "10.1109/ASP-DAC66049.2026.11420760",
+        "reason": "hardware: custom accelerator, outside software scope"
+      },
+      {
+        "key": "10.31649_vitce_2.2026.121",
+        "doi": "10.31649/vitce/2.2026.121",
+        "reason": "venue quality/indexing below article bar"
+      },
+      {
+        "key": "10.1109_CLOUD49709.2020.00056",
+        "doi": "10.1109/CLOUD49709.2020.00056",
+        "reason": "scope: edge wasm OS"
+      },
+      {
+        "key": "10.1109_CLEI53233.2021.9640153",
+        "doi": "10.1109/CLEI53233.2021.9640153",
+        "reason": "scope: generic non-web evaluation"
+      },
+      {
+        "key": "10.5753_sbesc_estendido.2020.13102",
+        "doi": "10.5753/sbesc_estendido.2020.13102",
+        "reason": "scope: IoT JS performance"
+      },
+      {
+        "key": "10.1145_3426422.3426978",
+        "doi": "10.1145/3426422.3426978",
+        "reason": "scope: delimited continuations, language runtime"
+      },
+      {
+        "key": "10.1109_RTAS68450.2026.00024",
+        "doi": "10.1109/RTAS68450.2026.00024",
+        "reason": "scope: worst-case execution time, embedded RT"
+      },
+      {
+        "key": "10.1145_3760387",
+        "doi": "10.1145/3760387",
+        "reason": "superseded_for_article_by:10.1007/s10723-023-09669-8"
+      },
+      {
+        "key": "10.1145_3733812.3765536",
+        "doi": "10.1145/3733812.3765536",
+        "reason": "scope: memory-safety tagging, security"
+      },
+      {
+        "key": "simdjson-data",
+        "doi": null,
+        "reason": "data artifact (GitHub corpus), not cited literature; not used as corpus here"
+      }
+    ],
+    "citation_order": [
+      {
+        "reference": 1,
+        "key": "10.17487_RFC8259",
+        "doi": "10.17487/RFC8259"
+      },
+      {
+        "reference": 2,
+        "key": "10.1002_spe.3313",
+        "doi": "10.1002/spe.3313"
+      },
+      {
+        "reference": 3,
+        "key": "10.1007_s00778-019-00578-5",
+        "doi": "10.1007/s00778-019-00578-5"
+      },
+      {
+        "reference": 4,
+        "key": "10.14778_3115404.3115416",
+        "doi": "10.14778/3115404.3115416"
+      },
+      {
+        "reference": 5,
+        "key": "10.14778_3236187.3236207",
+        "doi": "10.14778/3236187.3236207"
+      },
+      {
+        "reference": 6,
+        "key": "10.1145_3503222.3507719",
+        "doi": "10.1145/3503222.3507719"
+      },
+      {
+        "reference": 7,
+        "key": "10.1145_3297858.3304008",
+        "doi": "10.1145/3297858.3304008"
+      },
+      {
+        "reference": 8,
+        "key": "10.14778_3436905.3436926",
+        "doi": "10.14778/3436905.3436926"
+      },
+      {
+        "reference": 9,
+        "key": "10.14778_3137765.3137782",
+        "doi": "10.14778/3137765.3137782"
+      },
+      {
+        "reference": 10,
+        "key": "10.1145_3448016.3452809",
+        "doi": "10.1145/3448016.3452809"
+      },
+      {
+        "reference": 11,
+        "key": "10.14778_3746405.3746439",
+        "doi": "10.14778/3746405.3746439"
+      },
+      {
+        "reference": 12,
+        "key": "10.1145_3623278.3624754",
+        "doi": "10.1145/3623278.3624754"
+      },
+      {
+        "reference": 13,
+        "key": "10.14778_3778092.3778109",
+        "doi": "10.14778/3778092.3778109"
+      },
+      {
+        "reference": 14,
+        "key": "10.1016_j.is.2019.101478",
+        "doi": "10.1016/j.is.2019.101478"
+      },
+      {
+        "reference": 15,
+        "key": "10.1016_j.is.2025.102537",
+        "doi": "10.1016/j.is.2025.102537"
+      },
+      {
+        "reference": 16,
+        "key": "10.1007_s11280-025-01336-0",
+        "doi": "10.1007/s11280-025-01336-0"
+      },
+      {
+        "reference": 17,
+        "key": "10.1016_j.is.2020.101686",
+        "doi": "10.1016/j.is.2020.101686"
+      },
+      {
+        "reference": 18,
+        "key": "10.1145_3321704",
+        "doi": "10.1145/3321704"
+      },
+      {
+        "reference": 19,
+        "key": "10.14778_3611479.3611481",
+        "doi": "10.14778/3611479.3611481"
+      },
+      {
+        "reference": 20,
+        "key": "10.1145_3588957",
+        "doi": "10.1145/3588957"
+      },
+      {
+        "reference": 21,
+        "key": "10.1002_spe.2984",
+        "doi": "10.1002/spe.2984"
+      },
+      {
+        "reference": 22,
+        "key": "10.1002_spe.2920",
+        "doi": "10.1002/spe.2920"
+      },
+      {
+        "reference": 23,
+        "key": "10.1002_spe.3296",
+        "doi": "10.1002/spe.3296"
+      },
+      {
+        "reference": 24,
+        "key": "10.1002_spe.3396",
+        "doi": "10.1002/spe.3396"
+      },
+      {
+        "reference": 25,
+        "key": "10.1002_spe.3261",
+        "doi": "10.1002/spe.3261"
+      },
+      {
+        "reference": 26,
+        "key": "10.1002_spe.3036",
+        "doi": "10.1002/spe.3036"
+      },
+      {
+        "reference": 27,
+        "key": "10.1002_spe.2777",
+        "doi": "10.1002/spe.2777"
+      },
+      {
+        "reference": 28,
+        "key": "10.1002_spe.70105",
+        "doi": "10.1002/spe.70105"
+      },
+      {
+        "reference": 29,
+        "key": "10.1145_3859286",
+        "doi": "10.1145/3859286"
+      },
+      {
+        "reference": 30,
+        "key": "10.1145_3712197",
+        "doi": "10.1145/3712197"
+      },
+      {
+        "reference": 31,
+        "key": "10.1007_s10723-023-09669-8",
+        "doi": "10.1007/s10723-023-09669-8"
+      },
+      {
+        "reference": 32,
+        "key": "10.1145_3744916.3764533",
+        "doi": "10.1145/3744916.3764533"
+      },
+      {
+        "reference": 33,
+        "key": "10.1145_3714465",
+        "doi": "10.1145/3714465"
+      },
+      {
+        "reference": 34,
+        "key": "10.1145_3736169",
+        "doi": "10.1145/3736169"
+      },
+      {
+        "reference": 35,
+        "key": "10.1145_3498688",
+        "doi": "10.1145/3498688"
+      },
+      {
+        "reference": 36,
+        "key": "10.3390_fi16090341",
+        "doi": "10.3390/fi16090341"
+      },
+      {
+        "reference": 37,
+        "key": "10.1109_access.2026.3732375",
+        "doi": "10.1109/access.2026.3732375"
+      },
+      {
+        "reference": 38,
+        "key": "10.1145_2807591.2807644",
+        "doi": "10.1145/2807591.2807644"
+      },
+      {
+        "reference": 39,
+        "key": "10.1007_s10664-019-09681-1",
+        "doi": "10.1007/s10664-019-09681-1"
+      },
+      {
+        "reference": 40,
+        "key": "10.1007_s11704-018-7319-2",
+        "doi": "10.1007/s11704-018-7319-2"
+      },
+      {
+        "reference": 41,
+        "key": "10.1109_LCA.2026.3730505",
+        "doi": "10.1109/LCA.2026.3730505"
+      },
+      {
+        "reference": 42,
+        "key": "SchulzKumpel2025Constructing",
+        "doi": null
+      }
+    ]
+  },
+  "snapshot": {
+    "repository": "https://github.com/zuu-inner/thesis-article.git",
+    "path": "article/data/bib/cites.bib",
+    "sha256": "e648f8d5e7e9e364af420489364824f116cb414e08d17c89f1d6ef9d0a453ca9",
+    "entry_count": 42,
+    "doi_count": 41,
+    "url_only_keys": [
+      "SchulzKumpel2025Constructing"
+    ]
+  },
+  "doi_registry": {
+    "path": "article/data/json/crossref_verify.json",
+    "sha256": "6c1ec0a136d1d0732a0b041339959df8957011c1423c2f69f6f13c73e1743e7c",
+    "result_count": 66
+  }
+}

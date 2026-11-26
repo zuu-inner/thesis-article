@@ -1,13 +1,13 @@
 {
- "reference_count": 28,
- "crossref_found": 28,
- "journal_refs": 20,
- "recent_journal_refs": 20,
- "journal_pct": 71.4,
- "recent_journal_pct": 71.4,
- "intro_distinct_citations": 28,
- "intro_journal_refs": 20,
- "min_additional_journal_refs_for_80pct": 12,
+ "reference_count": 42,
+ "crossref_found": 41,
+ "journal_refs": 35,
+ "recent_journal_refs": 35,
+ "journal_pct": 83.3,
+ "recent_journal_pct": 83.3,
+ "intro_distinct_citations": 42,
+ "intro_journal_refs": 35,
+ "min_additional_journal_refs_for_80pct": 0,
  "min_additional_intro_journal_refs": 0,
  "title_words": 11,
  "abstract_words": 244,
@@ -16,6 +16,7 @@
  "rows": [
   {
    "n": 1,
+   "key": "10.17487_RFC8259",
    "doi": "10.17487/RFC8259",
    "year": 2017,
    "venue": "RFC 8259",
@@ -29,6 +30,7 @@
   },
   {
    "n": 2,
+   "key": "10.1002_spe.3313",
    "doi": "10.1002/spe.3313",
    "year": 2024,
    "venue": "Software: Practice and Experience",
@@ -42,6 +44,7 @@
   },
   {
    "n": 3,
+   "key": "10.1007_s00778-019-00578-5",
    "doi": "10.1007/s00778-019-00578-5",
    "year": 2019,
    "venue": "The VLDB Journal",
@@ -55,6 +58,7 @@
   },
   {
    "n": 4,
+   "key": "10.14778_3115404.3115416",
    "doi": "10.14778/3115404.3115416",
    "year": 2017,
    "venue": "Proc. VLDB Endow.",
@@ -68,6 +72,7 @@
   },
   {
    "n": 5,
+   "key": "10.14778_3236187.3236207",
    "doi": "10.14778/3236187.3236207",
    "year": 2018,
    "venue": "Proc. VLDB Endow.",
@@ -81,9 +86,10 @@
   },
   {
    "n": 6,
+   "key": "10.1145_3503222.3507719",
    "doi": "10.1145/3503222.3507719",
    "year": 2022,
-   "venue": "Proceedings of the 27th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems",
+   "venue": "Proceedings of the 27th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}",
    "venue_type": "proceedings",
    "is_journal": false,
    "recent": true,
@@ -94,6 +100,7 @@
   },
   {
    "n": 7,
+   "key": "10.1145_3297858.3304008",
    "doi": "10.1145/3297858.3304008",
    "year": 2019,
    "venue": "Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems",
@@ -107,6 +114,7 @@
   },
   {
    "n": 8,
+   "key": "10.14778_3436905.3436926",
    "doi": "10.14778/3436905.3436926",
    "year": 2020,
    "venue": "Proc. VLDB Endow.",
@@ -120,6 +128,7 @@
   },
   {
    "n": 9,
+   "key": "10.14778_3137765.3137782",
    "doi": "10.14778/3137765.3137782",
    "year": 2017,
    "venue": "Proc. VLDB Endow.",
@@ -133,6 +142,7 @@
   },
   {
    "n": 10,
+   "key": "10.1145_3448016.3452809",
    "doi": "10.1145/3448016.3452809",
    "year": 2021,
    "venue": "Proceedings of the 2021 International Conference on Management of Data",
@@ -146,6 +156,7 @@
   },
   {
    "n": 11,
+   "key": "10.14778_3746405.3746439",
    "doi": "10.14778/3746405.3746439",
    "year": 2025,
    "venue": "Proc. VLDB Endow.",
@@ -159,8 +170,9 @@
   },
   {
    "n": 12,
+   "key": "10.1145_3623278.3624754",
    "doi": "10.1145/3623278.3624754",
-   "year": 2024,
+   "year": 2023,
    "venue": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4",
    "venue_type": "proceedings",
    "is_journal": false,
@@ -172,6 +184,7 @@
   },
   {
    "n": 13,
+   "key": "10.14778_3778092.3778109",
    "doi": "10.14778/3778092.3778109",
    "year": 2025,
    "venue": "Proc. VLDB Endow.",
@@ -185,6 +198,105 @@
   },
   {
    "n": 14,
+   "key": "10.1016_j.is.2019.101478",
+   "doi": "10.1016/j.is.2019.101478",
+   "year": 2020,
+   "venue": "Information Systems",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 15,
+   "key": "10.1016_j.is.2025.102537",
+   "doi": "10.1016/j.is.2025.102537",
+   "year": 2025,
+   "venue": "Information Systems",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 16,
+   "key": "10.1007_s11280-025-01336-0",
+   "doi": "10.1007/s11280-025-01336-0",
+   "year": 2025,
+   "venue": "World Wide Web",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 17,
+   "key": "10.1016_j.is.2020.101686",
+   "doi": "10.1016/j.is.2020.101686",
+   "year": 2021,
+   "venue": "Information Systems",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 18,
+   "key": "10.1145_3321704",
+   "doi": "10.1145/3321704",
+   "year": 2019,
+   "venue": "ACM Trans. Storage",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 19,
+   "key": "10.14778_3611479.3611481",
+   "doi": "10.14778/3611479.3611481",
+   "year": 2023,
+   "venue": "Proc. VLDB Endow.",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 20,
+   "key": "10.1145_3588957",
+   "doi": "10.1145/3588957",
+   "year": 2023,
+   "venue": "Proc. ACM Manag. Data",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 21,
+   "key": "10.1002_spe.2984",
    "doi": "10.1002/spe.2984",
    "year": 2021,
    "venue": "Software: Practice and Experience",
@@ -197,7 +309,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 15,
+   "n": 22,
+   "key": "10.1002_spe.2920",
    "doi": "10.1002/spe.2920",
    "year": 2021,
    "venue": "Software: Practice and Experience",
@@ -210,7 +323,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 16,
+   "n": 23,
+   "key": "10.1002_spe.3296",
    "doi": "10.1002/spe.3296",
    "year": 2024,
    "venue": "Software: Practice and Experience",
@@ -223,7 +337,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 17,
+   "n": 24,
+   "key": "10.1002_spe.3396",
    "doi": "10.1002/spe.3396",
    "year": 2025,
    "venue": "Software: Practice and Experience",
@@ -236,7 +351,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 18,
+   "n": 25,
+   "key": "10.1002_spe.3261",
    "doi": "10.1002/spe.3261",
    "year": 2023,
    "venue": "Software: Practice and Experience",
@@ -249,7 +365,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 19,
+   "n": 26,
+   "key": "10.1002_spe.3036",
    "doi": "10.1002/spe.3036",
    "year": 2022,
    "venue": "Software: Practice and Experience",
@@ -262,7 +379,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 20,
+   "n": 27,
+   "key": "10.1002_spe.2777",
    "doi": "10.1002/spe.2777",
    "year": 2020,
    "venue": "Software: Practice and Experience",
@@ -275,7 +393,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 21,
+   "n": 28,
+   "key": "10.1002_spe.70105",
    "doi": "10.1002/spe.70105",
    "year": 2026,
    "venue": "Software: Practice and Experience",
@@ -288,7 +407,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 22,
+   "n": 29,
+   "key": "10.1145_3859286",
    "doi": "10.1145/3859286",
    "year": 2026,
    "venue": "ACM Trans. Archit. Code Optim.",
@@ -301,20 +421,36 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 23,
-   "doi": "10.1145/3487552.3487827",
-   "year": 2021,
-   "venue": "Proceedings of the 21st ACM Internet Measurement Conference",
-   "venue_type": "proceedings",
-   "is_journal": false,
+   "n": 30,
+   "key": "10.1145_3712197",
+   "doi": "10.1145/3712197",
+   "year": 2025,
+   "venue": "ACM Transactions on Software Engineering and Methodology",
+   "venue_type": "journal",
+   "is_journal": true,
    "recent": true,
-   "qualifying": false,
+   "qualifying": true,
    "in_intro": true,
    "crossref_status": "found",
    "include_status": "INCLUDE"
   },
   {
-   "n": 24,
+   "n": 31,
+   "key": "10.1007_s10723-023-09669-8",
+   "doi": "10.1007/s10723-023-09669-8",
+   "year": 2023,
+   "venue": "Journal of Grid Computing",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 32,
+   "key": "10.1145_3744916.3764533",
    "doi": "10.1145/3744916.3764533",
    "year": 2026,
    "venue": "Proceedings of the 2026 IEEE/ACM 48th International Conference on Software Engineering",
@@ -327,7 +463,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 25,
+   "n": 33,
+   "key": "10.1145_3714465",
    "doi": "10.1145/3714465",
    "year": 2025,
    "venue": "ACM Trans. Softw. Eng. Methodol.",
@@ -340,7 +477,8 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 26,
+   "n": 34,
+   "key": "10.1145_3736169",
    "doi": "10.1145/3736169",
    "year": 2025,
    "venue": "ACM Trans. Archit. Code Optim.",
@@ -353,10 +491,11 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 27,
-   "doi": "10.1145/3760387",
-   "year": 2025,
-   "venue": "ACM Trans. Embed. Comput. Syst.",
+   "n": 35,
+   "key": "10.1145_3498688",
+   "doi": "10.1145/3498688",
+   "year": 2022,
+   "venue": "Proc. ACM Program. Lang.",
    "venue_type": "journal",
    "is_journal": true,
    "recent": true,
@@ -366,7 +505,36 @@
    "include_status": "INCLUDE"
   },
   {
-   "n": 28,
+   "n": 36,
+   "key": "10.3390_fi16090341",
+   "doi": "10.3390/fi16090341",
+   "year": 2024,
+   "venue": "Future Internet",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 37,
+   "key": "10.1109_access.2026.3732375",
+   "doi": "10.1109/access.2026.3732375",
+   "year": 2026,
+   "venue": "IEEE Access",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 38,
+   "key": "10.1145_2807591.2807644",
    "doi": "10.1145/2807591.2807644",
    "year": 2015,
    "venue": "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis",
@@ -376,6 +544,62 @@
    "qualifying": false,
    "in_intro": true,
    "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 39,
+   "key": "10.1007_s10664-019-09681-1",
+   "doi": "10.1007/s10664-019-09681-1",
+   "year": 2019,
+   "venue": "Empirical Software Engineering",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 40,
+   "key": "10.1007_s11704-018-7319-2",
+   "doi": "10.1007/s11704-018-7319-2",
+   "year": 2020,
+   "venue": "Frontiers of Computer Science",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 41,
+   "key": "10.1109_LCA.2026.3730505",
+   "doi": "10.1109/LCA.2026.3730505",
+   "year": 2026,
+   "venue": "IEEE Computer Architecture Letters",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "found",
+   "include_status": "INCLUDE"
+  },
+  {
+   "n": 42,
+   "key": "SchulzKumpel2025Constructing",
+   "doi": null,
+   "year": 2025,
+   "venue": "Journal of Data-centric Machine Learning Research",
+   "venue_type": "journal",
+   "is_journal": true,
+   "recent": true,
+   "qualifying": true,
+   "in_intro": true,
+   "crossref_status": "url-only",
    "include_status": "INCLUDE"
   }
  ]

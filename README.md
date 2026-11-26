@@ -16,7 +16,7 @@ tetapi tetap dapat dipasang sebagai submodule pada path `article/` di workspace
 | `scripts/Ledger/` | Evidence ledger dan rekalkulasi statistik |
 | `scripts/Charter/` | Data serta generator chart |
 | `scripts/Grapher/` | Diagram Mermaid, SVG master, dan rasterisasi |
-| `scripts/Literature/` | Matriks dan verifikasi literatur |
+| `scripts/Literature/` | Filter bibliografi kanonik, matriks, dan verifikasi DOI |
 | `scripts/FinalAudit/` | Gerbang audit independen |
 | `data/` | Data turunan dan provenance evidence |
 | `assets/` | Gambar, SVG master, dan evidence visual |
@@ -54,15 +54,42 @@ python scripts/Builder/finalize_pdf.py
 python scripts/FinalAudit/verify_final_manuscript.py
 ```
 
-Audit dan laporan provenance terkini berada di
-`drafts/final-audit/final-report-2026-11-25.md`.
+Audit naskah terkini berada di
+`drafts/final-audit/final-report-2026-11-25.md`; provenance bibliografi
+terkini berada di `drafts/final-audit/bibliography-provenance-2026-11-26.md`.
 
 ## Provenance snapshot
 
 Snapshot awal repo ini berasal dari working tree artikel pada 2026-11-25 dan
 mengacu pada workspace riset commit `a1fad918a7fccb6464722ac35723c29800ba7849`.
+Snapshot bibliografi aktif sekarang dibuat ulang sebagai filter terverifikasi
+dari registri kanonik root commit
+`5f2043a426e52ee5af193920bccaafcbb2dc1aab`.
+
 Template AVITEC `article.docx` harus mempertahankan SHA-256 awalnya; file
 tersebut adalah artefak pristine, bukan output build.
+
+## Bibliografi kanonik
+
+`data/bib/article-selection.json` adalah manifest eksplisit untuk 42 referensi
+artikel dan alasan terpilih/tidaknya terhadap 68 entri registri kanonik. File
+`data/bib/cites.bib` adalah hasil filter, bukan sumber kebenaran; provenance
+lengkap ada di `data/bib/cites.bib.provenance.json`.
+
+Untuk checkout sebagai submodule, jalankan dari root workspace:
+
+```powershell
+python article/scripts/Literature/build_matrix.py `
+  --source-commit 5f2043a426e52ee5af193920bccaafcbb2dc1aab
+python article/scripts/Literature/build_bibliography_snapshot.py `
+  --source-commit 5f2043a426e52ee5af193920bccaafcbb2dc1aab
+python article/scripts/FinalAudit/verify_bibliography_snapshot.py `
+  --source-commit 5f2043a426e52ee5af193920bccaafcbb2dc1aab
+```
+
+Untuk checkout mandiri, set `THESIS_WORKSPACE_ROOT` lebih dahulu. Gunakan
+`--refresh` atau `--refresh-doi <doi>` hanya ketika registry DOI perlu
+diperbarui; hasil registry yang sudah terverifikasi digunakan sebagai cache.
 
 ## Git
 

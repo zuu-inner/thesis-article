@@ -35,5 +35,8 @@
   `scripts/FinalAudit/verify_final_manuscript.py`.
 - Perubahan chart/figure: regenerate dari data, bukan mengedit PNG hasil.
 - Perubahan literature: audit DOI, eligibility, dan keterkaitan sitasi.
+- `data/bib/cites.bib` adalah hasil filter dari registri kanonik root; jangan
+  menyuntingnya manual. Regenerasi dengan `scripts/Literature/`, lalu jalankan
+  `scripts/FinalAudit/verify_bibliography_snapshot.py`.
 - Perubahan path/provenance: jalankan verifier dari checkout submodule dan
   checkout mandiri dengan `THESIS_WORKSPACE_ROOT`.

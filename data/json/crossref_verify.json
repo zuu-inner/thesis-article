@@ -1,415 +1,805 @@
 {
- "schema_version": "1.0.0",
- "kind": "crossref_verification",
- "date": "2026-11-18",
- "results": [
-  {
-   "doi": "10.1002/spe.3313",
-   "registry": "crossref",
-   "status": "found",
-   "title": "On‐demand JSON: A better way to parse documents?",
-   "year": 2024,
-   "container": "Software: Practice and Experience"
+  "schema_version": "1.1.0",
+  "kind": "crossref_verification",
+  "date": "2026-11-26",
+  "source": {
+    "repository": "https://github.com/zuudevs/thesis.git",
+    "commit": "5f2043a426e52ee5af193920bccaafcbb2dc1aab",
+    "path": "assets/bib/cites.bib",
+    "entry_count": 68
   },
-  {
-   "doi": "10.1002/spe.2777",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Base64 encoding and decoding at almost the speed of a memory copy",
-   "year": 2019,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1145/3859286",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Fast Forgiving Base64 Decoding with SIMD Instructions",
-   "year": 2026,
-   "container": "ACM Transactions on Architecture and Code Optimization"
-  },
-  {
-   "doi": "10.1002/spe.3261",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Transcoding unicode characters with AVX‐512 instructions",
-   "year": 2023,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1002/spe.3036",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Transcoding billions of Unicode characters per second with SIMD instructions",
-   "year": 2021,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1002/spe.3396",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Parsing Millions of DNS Records Per Second",
-   "year": 2024,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1145/3487552.3487827",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Understanding the performance of webassembly applications",
-   "year": 2021,
-   "container": "Proceedings of the 21st ACM Internet Measurement Conference"
-  },
-  {
-   "doi": "10.51219/JAIMLD/chakradhar-avinash-devarapalli/63",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Web Assembly (Wasm): An Innovation to Client-Side Improvement",
-   "year": 2024,
-   "container": "Journal of Artificial Intelligence, Machine Learning and Data Science"
-  },
-  {
-   "doi": "10.14778/3778092.3778109",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Streaming Validation of JSON Documents against Schemas",
-   "year": 2025,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.48550/arXiv.1902.08318",
-   "registry": "datacite",
-   "status": "found",
-   "title": "Parsing Gigabytes of JSON per Second",
-   "year": 2019,
-   "container": "arXiv"
-  },
-  {
-   "doi": "10.1145/3572848.3577436",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Exploring the Use of WebAssembly in HPC",
-   "year": 2023,
-   "container": "Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming"
-  },
-  {
-   "doi": "10.1145/3623278.3624754",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Supporting Descendants in SIMD-Accelerated JSONPath",
-   "year": 2023,
-   "container": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4"
-  },
-  {
-   "doi": "10.1145/3297858.3304008",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Scalable Processing of Contemporary Semi-Structured Data on Commodity Parallel Processors - A Compilation-based Approach",
-   "year": 2019,
-   "container": "Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems"
-  },
-  {
-   "doi": "10.1145/3503222.3507719",
-   "registry": "crossref",
-   "status": "found",
-   "title": "JSONSki: streaming semi-structured data with bit-parallel fast-forwarding",
-   "year": 2022,
-   "container": "Proceedings of the 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems"
-  },
-  {
-   "doi": "10.14778/3746405.3746439",
-   "registry": "crossref",
-   "status": "found",
-   "title": "GpJSON: High-Performance JSON Data Processing on GPUs",
-   "year": 2025,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.1109/ICHCI67614.2025.11292539",
-   "registry": "crossref",
-   "status": "found",
-   "title": "High-Performance Computing in Browsers: An Empirical Study Evaluating the Computational Efficiency of JS, C++ WASM, and Java WASM in Matrix Operations",
-   "year": 2025,
-   "container": "2025 6th International Conference on Intelligent Computing and Human-Computer Interaction (ICHCI)"
-  },
-  {
-   "doi": "10.48550/arXiv.2205.05464",
-   "registry": "datacite",
-   "status": "found",
-   "title": "Raw Filtering of JSON Data on FPGAs",
-   "year": 2022,
-   "container": "arXiv"
-  },
-  {
-   "doi": "10.1109/ASE56229.2023.00088",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Revealing Performance Issues in Server-Side WebAssembly Runtimes Via Differential Testing",
-   "year": 2023,
-   "container": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)"
-  },
-  {
-   "doi": "10.14778/3115404.3115416",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Mison",
-   "year": 2017,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.14778/3436905.3436926",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Scalable structural index construction for JSON analytics",
-   "year": 2020,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.14778/3236187.3236207",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Filter before you parse",
-   "year": 2018,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.1109/IcETRAN62308.2024.10645198",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Application of WebAssembly Technology in High-Performance Web Applications",
-   "year": 2024,
-   "container": "2024 11th International Conference on Electrical, Electronic and Computing Engineering (IcETRAN)"
-  },
-  {
-   "doi": "10.1002/spe.2984",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Number parsing at a gigabyte per second",
-   "year": 2021,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.47852/bonviewAAES52024965",
-   "registry": "crossref",
-   "status": "found",
-   "title": "A Comparative Study of WebAssembly Runtimes: Performance Metrics, Integration Challenges, Application Domains, and Security Features",
-   "year": 2025,
-   "container": "Archives of Advanced Engineering Science"
-  },
-  {
-   "doi": "10.48550/arXiv.2512.00035",
-   "registry": "datacite",
-   "status": "found",
-   "title": "WebAssembly on Resource-Constrained IoT Devices: Performance, Efficiency, and Portability",
-   "year": 2025,
-   "container": "arXiv"
-  },
-  {
-   "doi": "10.1145/2807591.2807644",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Scientific benchmarking of parallel computing systems",
-   "year": 2015,
-   "container": "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis"
-  },
-  {
-   "doi": "10.1002/spe.2920",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Validating UTF‐8 in less than one instruction per byte",
-   "year": 2020,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.17487/RFC8259",
-   "registry": "crossref",
-   "status": "found",
-   "title": "The JavaScript Object Notation (JSON) Data Interchange Format",
-   "year": 2017,
-   "container": ""
-  },
-  {
-   "doi": "10.1145/3533737.3535094",
-   "registry": "crossref",
-   "status": "found",
-   "title": "PipeJSON: Parsing JSON at Line Speed on FPGAs",
-   "year": 2022,
-   "container": "Data Management on New Hardware"
-  },
-  {
-   "doi": "10.1109/ICT4S55073.2022.00014",
-   "registry": "crossref",
-   "status": "found",
-   "title": "WebAssembly versus JavaScript: Energy and Runtime Performance",
-   "year": 2022,
-   "container": "2022 International Conference on ICT for Sustainability (ICT4S)"
-  },
-  {
-   "doi": "10.1145/3448016.3452809",
-   "registry": "crossref",
-   "status": "found",
-   "title": "JSON Tiles: Fast Analytics on Semi-Structured Data",
-   "year": 2021,
-   "container": "Proceedings of the 2021 International Conference on Management of Data"
-  },
-  {
-   "doi": "10.1109/PMBS56514.2022.00011",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Performance Analysis with Unified Hardware Counter Metrics",
-   "year": 2022,
-   "container": "2022 IEEE/ACM International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS)"
-  },
-  {
-   "doi": "10.1145/3593434.3593454",
-   "registry": "crossref",
-   "status": "found",
-   "title": "On the Energy Consumption and Performance of WebAssembly Binaries across Programming Languages and Runtimes in IoT",
-   "year": 2023,
-   "container": "Proceedings of the 27th International Conference on Evaluation and Assessment in Software Engineering"
-  },
-  {
-   "doi": "10.1109/SSE62657.2024.00054",
-   "registry": "crossref",
-   "status": "found",
-   "title": "eWAPA: An eBPF-based WASI Performance Analysis Framework for Web Assembly Runtimes",
-   "year": 2024,
-   "container": "2024 IEEE International Conference on Software Services Engineering (SSE)"
-  },
-  {
-   "doi": "10.14778/3137765.3137782",
-   "registry": "crossref",
-   "status": "found",
-   "title": "FAD.js",
-   "year": 2017,
-   "container": "Proceedings of the VLDB Endowment"
-  },
-  {
-   "doi": "10.1145/3611643.3616311",
-   "registry": "crossref",
-   "status": "found",
-   "title": "When Function Inlining Meets WebAssembly: Counterintuitive Impacts on Runtime Performance",
-   "year": 2023,
-   "container": "Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering"
-  },
-  {
-   "doi": "10.1145/3736169",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Benchmarking WebAssembly for Embedded Systems",
-   "year": 2025,
-   "container": "ACM Transactions on Architecture and Code Optimization"
-  },
-  {
-   "doi": "10.1002/spe.3296",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Parsing millions of URLs per second",
-   "year": 2023,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1002/spe.70105",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Fixing Ill‐Formed\n                    <scp>UTF</scp>\n                    ‐16 Strings With\n                    <scp>SIMD</scp>\n                    Instructions",
-   "year": 2026,
-   "container": "Software: Practice and Experience"
-  },
-  {
-   "doi": "10.1145/3714465",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Research on WebAssembly Runtimes: A Survey",
-   "year": 2025,
-   "container": "ACM Transactions on Software Engineering and Methodology"
-  },
-  {
-   "doi": "10.1109/ASP-DAC66049.2026.11420760",
-   "registry": "crossref",
-   "status": "found",
-   "title": "WPU: A Pipelined WebAssembly Processing Unit for Embedded IoT Systems",
-   "year": 2026,
-   "container": "2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC)"
-  },
-  {
-   "doi": "10.31649/vitce/2.2026.121",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Parallelism and WebAssembly memory management in microinterface architecture",
-   "year": 2026,
-   "container": "Information Technology and Computer Engineering"
-  },
-  {
-   "doi": "10.1109/CLOUD49709.2020.00056",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Wasmachine: Bring the Edge up to Speed with A WebAssembly OS",
-   "year": 2020,
-   "container": "2020 IEEE 13th International Conference on Cloud Computing (CLOUD)"
-  },
-  {
-   "doi": "10.1109/CLEI53233.2021.9640153",
-   "registry": "crossref",
-   "status": "found",
-   "title": "An Evaluation of WebAssembly in Non-Web Environments",
-   "year": 2021,
-   "container": "2021 XLVII Latin American Computing Conference (CLEI)"
-  },
-  {
-   "doi": "10.5753/sbesc_estendido.2020.13102",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Analysis of WebAssembly as a Strategy to Improve JavaScript Performance on IoT Environments",
-   "year": 2020,
-   "container": "Anais Estendidos do X Simpósio Brasileiro de Engenharia de Sistemas Computacionais (SBESC Estendido 2020)"
-  },
-  {
-   "doi": "10.1145/3426422.3426978",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Wasm/k: delimited continuations for WebAssembly",
-   "year": 2020,
-   "container": "Proceedings of the 16th ACM SIGPLAN International Symposium on Dynamic Languages"
-  },
-  {
-   "doi": "10.1109/RTAS68450.2026.00024",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Wasm-WCET: Worst-Case Execution-Time Analysis of WebAssembly Modules on Updatable Resource-Constrained Embedded Devices",
-   "year": 2026,
-   "container": "2026 IEEE 32nd Real-Time and Embedded Technology and Applications Symposium (RTAS)"
-  },
-  {
-   "doi": "10.1145/3760387",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Wasm-IO: Enabling Low-Level Device Interaction in WebAssembly for Industry Automation",
-   "year": 2025,
-   "container": "ACM Transactions on Embedded Computing Systems"
-  },
-  {
-   "doi": "10.1145/3733812.3765536",
-   "registry": "crossref",
-   "status": "found",
-   "title": "WebAssembly Memory Tagging",
-   "year": 2025,
-   "container": "Proceedings of the 2025 Cloud Computing Security Workshop"
-  },
-  {
-   "doi": "10.1145/3744916.3764533",
-   "registry": "crossref",
-   "status": "found",
-   "title": "An Empirical Study of WebAssembly Usage in Node.js",
-   "year": 2026,
-   "container": "Proceedings of the 2026 IEEE/ACM 48th International Conference on Software Engineering"
-  },
-  {
-   "doi": "10.1007/s00778-019-00578-5",
-   "registry": "crossref",
-   "status": "found",
-   "title": "Parsing gigabytes of JSON per second",
-   "year": 2019,
-   "container": "The VLDB Journal"
-  }
- ]
+  "results": [
+    {
+      "doi": "10.1002/spe.2777",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Base64 encoding and decoding at almost the speed of a memory copy",
+      "year": 2020,
+      "container": "Software: Practice and Experience",
+      "volume": "50",
+      "issue": "2",
+      "page": "89-97",
+      "url": "https://doi.org/10.1002/spe.2777"
+    },
+    {
+      "doi": "10.1002/spe.2920",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Validating UTF‐8 in less than one instruction per byte",
+      "year": 2021,
+      "container": "Software: Practice and Experience",
+      "volume": "51",
+      "issue": "5",
+      "page": "950-964",
+      "url": "https://doi.org/10.1002/spe.2920"
+    },
+    {
+      "doi": "10.1002/spe.2984",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Number parsing at a gigabyte per second",
+      "year": 2021,
+      "container": "Software: Practice and Experience",
+      "volume": "51",
+      "issue": "8",
+      "page": "1700-1727",
+      "url": "https://doi.org/10.1002/spe.2984"
+    },
+    {
+      "doi": "10.1002/spe.3036",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Transcoding billions of Unicode characters per second with SIMD instructions",
+      "year": 2022,
+      "container": "Software: Practice and Experience",
+      "volume": "52",
+      "issue": "2",
+      "page": "555-575",
+      "url": "https://doi.org/10.1002/spe.3036"
+    },
+    {
+      "doi": "10.1002/spe.3261",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Transcoding unicode characters with AVX‐512 instructions",
+      "year": 2023,
+      "container": "Software: Practice and Experience",
+      "volume": "53",
+      "issue": "12",
+      "page": "2430-2462",
+      "url": "https://doi.org/10.1002/spe.3261"
+    },
+    {
+      "doi": "10.1002/spe.3296",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Parsing millions of URLs per second",
+      "year": 2024,
+      "container": "Software: Practice and Experience",
+      "volume": "54",
+      "issue": "5",
+      "page": "744-758",
+      "url": "https://doi.org/10.1002/spe.3296"
+    },
+    {
+      "doi": "10.1002/spe.3313",
+      "registry": "crossref",
+      "status": "found",
+      "title": "On‐demand JSON: A better way to parse documents?",
+      "year": 2024,
+      "container": "Software: Practice and Experience",
+      "volume": "54",
+      "issue": "6",
+      "page": "1074-1086",
+      "url": "https://doi.org/10.1002/spe.3313"
+    },
+    {
+      "doi": "10.1002/spe.3396",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Parsing Millions of DNS Records Per Second",
+      "year": 2025,
+      "container": "Software: Practice and Experience",
+      "volume": "55",
+      "issue": "4",
+      "page": "778-788",
+      "url": "https://doi.org/10.1002/spe.3396"
+    },
+    {
+      "doi": "10.1002/spe.70105",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Fixing Ill‐Formed\n                    <scp>UTF</scp>\n                    ‐16 Strings With\n                    <scp>SIMD</scp>\n                    Instructions",
+      "year": 2026,
+      "container": "Software: Practice and Experience",
+      "volume": "56",
+      "issue": "12",
+      "page": "1498-1509",
+      "url": "https://doi.org/10.1002/spe.70105"
+    },
+    {
+      "doi": "10.1007/s00778-019-00578-5",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Parsing gigabytes of JSON per second",
+      "year": 2019,
+      "container": "The VLDB Journal",
+      "volume": "28",
+      "issue": "6",
+      "page": "941-960",
+      "url": "https://doi.org/10.1007/s00778-019-00578-5"
+    },
+    {
+      "doi": "10.1007/s10664-019-09681-1",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Software microbenchmarking in the cloud. How bad is it really?",
+      "year": 2019,
+      "container": "Empirical Software Engineering",
+      "volume": "24",
+      "issue": "4",
+      "page": "2469-2508",
+      "url": "https://doi.org/10.1007/s10664-019-09681-1"
+    },
+    {
+      "doi": "10.1007/s10723-023-09669-8",
+      "registry": "crossref",
+      "status": "found",
+      "title": "WebAssembly as an Enabler for Next Generation Serverless Computing",
+      "year": 2023,
+      "container": "Journal of Grid Computing",
+      "volume": "21",
+      "issue": "3",
+      "page": null,
+      "url": "https://doi.org/10.1007/s10723-023-09669-8"
+    },
+    {
+      "doi": "10.1007/s11280-025-01336-0",
+      "registry": "crossref",
+      "status": "found",
+      "title": "JAL: an algebra for JSON query optimization",
+      "year": 2025,
+      "container": "World Wide Web",
+      "volume": "28",
+      "issue": "3",
+      "page": null,
+      "url": "https://doi.org/10.1007/s11280-025-01336-0"
+    },
+    {
+      "doi": "10.1007/s11704-018-7319-2",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Computer comparisons in the presence of performance variation",
+      "year": 2020,
+      "container": "Frontiers of Computer Science",
+      "volume": "14",
+      "issue": "1",
+      "page": "21-41",
+      "url": "https://doi.org/10.1007/s11704-018-7319-2"
+    },
+    {
+      "doi": "10.1016/j.is.2019.101478",
+      "registry": "crossref",
+      "status": "found",
+      "title": "JSON: Data model and query languages",
+      "year": 2020,
+      "container": "Information Systems",
+      "volume": "89",
+      "issue": null,
+      "page": "101478",
+      "url": "https://doi.org/10.1016/j.is.2019.101478"
+    },
+    {
+      "doi": "10.1016/j.is.2020.101686",
+      "registry": "crossref",
+      "status": "found",
+      "title": "SJSON: A succinct representation for JSON documents",
+      "year": 2021,
+      "container": "Information Systems",
+      "volume": "97",
+      "issue": null,
+      "page": "101686",
+      "url": "https://doi.org/10.1016/j.is.2020.101686"
+    },
+    {
+      "doi": "10.1016/j.is.2025.102537",
+      "registry": "crossref",
+      "status": "found",
+      "title": "A JSON document algebra for query optimization",
+      "year": 2025,
+      "container": "Information Systems",
+      "volume": "132",
+      "issue": null,
+      "page": "102537",
+      "url": "https://doi.org/10.1016/j.is.2025.102537"
+    },
+    {
+      "doi": "10.1109/access.2026.3732375",
+      "registry": "crossref",
+      "status": "found",
+      "title": "<i>ePipe</i>\n                    : Decomposing the WebAssembly Streaming I/O Tax Into Data-Path and Guest-Computation Costs",
+      "year": 2026,
+      "container": "IEEE Access",
+      "volume": "14",
+      "issue": null,
+      "page": "143952-143969",
+      "url": "https://doi.org/10.1109/access.2026.3732375"
+    },
+    {
+      "doi": "10.1109/ASE56229.2023.00088",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Revealing Performance Issues in Server-Side WebAssembly Runtimes Via Differential Testing",
+      "year": 2023,
+      "container": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+      "volume": null,
+      "issue": null,
+      "page": "661-672",
+      "url": "https://doi.org/10.1109/ase56229.2023.00088"
+    },
+    {
+      "doi": "10.1109/ASP-DAC66049.2026.11420760",
+      "registry": "crossref",
+      "status": "found",
+      "title": "WPU: A Pipelined WebAssembly Processing Unit for Embedded IoT Systems",
+      "year": 2026,
+      "container": "2026 31st Asia and South Pacific Design Automation Conference (ASP-DAC)",
+      "volume": null,
+      "issue": null,
+      "page": "1357-1363",
+      "url": "https://doi.org/10.1109/asp-dac66049.2026.11420760"
+    },
+    {
+      "doi": "10.1109/CLEI53233.2021.9640153",
+      "registry": "crossref",
+      "status": "found",
+      "title": "An Evaluation of WebAssembly in Non-Web Environments",
+      "year": 2021,
+      "container": "2021 XLVII Latin American Computing Conference (CLEI)",
+      "volume": null,
+      "issue": null,
+      "page": "1-10",
+      "url": "https://doi.org/10.1109/clei53233.2021.9640153"
+    },
+    {
+      "doi": "10.1109/CLOUD49709.2020.00056",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Wasmachine: Bring the Edge up to Speed with A WebAssembly OS",
+      "year": 2020,
+      "container": "2020 IEEE 13th International Conference on Cloud Computing (CLOUD)",
+      "volume": null,
+      "issue": null,
+      "page": "353-360",
+      "url": "https://doi.org/10.1109/cloud49709.2020.00056"
+    },
+    {
+      "doi": "10.1109/IcETRAN62308.2024.10645198",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Application of WebAssembly Technology in High-Performance Web Applications",
+      "year": 2024,
+      "container": "2024 11th International Conference on Electrical, Electronic and Computing Engineering (IcETRAN)",
+      "volume": null,
+      "issue": null,
+      "page": "1-6",
+      "url": "https://doi.org/10.1109/icetran62308.2024.10645198"
+    },
+    {
+      "doi": "10.1109/ICHCI67614.2025.11292539",
+      "registry": "crossref",
+      "status": "found",
+      "title": "High-Performance Computing in Browsers: An Empirical Study Evaluating the Computational Efficiency of JS, C++ WASM, and Java WASM in Matrix Operations",
+      "year": 2025,
+      "container": "2025 6th International Conference on Intelligent Computing and Human-Computer Interaction (ICHCI)",
+      "volume": null,
+      "issue": null,
+      "page": "366-373",
+      "url": "https://doi.org/10.1109/ichci67614.2025.11292539"
+    },
+    {
+      "doi": "10.1109/ICT4S55073.2022.00014",
+      "registry": "crossref",
+      "status": "found",
+      "title": "WebAssembly versus JavaScript: Energy and Runtime Performance",
+      "year": 2022,
+      "container": "2022 International Conference on ICT for Sustainability (ICT4S)",
+      "volume": null,
+      "issue": null,
+      "page": "24-34",
+      "url": "https://doi.org/10.1109/ict4s55073.2022.00014"
+    },
+    {
+      "doi": "10.1109/LCA.2026.3730505",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Establishing Confidence in Average Metrics",
+      "year": 2026,
+      "container": "IEEE Computer Architecture Letters",
+      "volume": "25",
+      "issue": "2",
+      "page": "363-366",
+      "url": "https://doi.org/10.1109/lca.2026.3730505"
+    },
+    {
+      "doi": "10.1109/PMBS56514.2022.00011",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Performance Analysis with Unified Hardware Counter Metrics",
+      "year": 2022,
+      "container": "2022 IEEE/ACM International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS)",
+      "volume": null,
+      "issue": null,
+      "page": "60-70",
+      "url": "https://doi.org/10.1109/pmbs56514.2022.00011"
+    },
+    {
+      "doi": "10.1109/RTAS68450.2026.00024",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Wasm-WCET: Worst-Case Execution-Time Analysis of WebAssembly Modules on Updatable Resource-Constrained Embedded Devices",
+      "year": 2026,
+      "container": "2026 IEEE 32nd Real-Time and Embedded Technology and Applications Symposium (RTAS)",
+      "volume": null,
+      "issue": null,
+      "page": "152-166",
+      "url": "https://doi.org/10.1109/rtas68450.2026.00024"
+    },
+    {
+      "doi": "10.1109/SSE62657.2024.00054",
+      "registry": "crossref",
+      "status": "found",
+      "title": "eWAPA: An eBPF-based WASI Performance Analysis Framework for Web Assembly Runtimes",
+      "year": 2024,
+      "container": "2024 IEEE International Conference on Software Services Engineering (SSE)",
+      "volume": null,
+      "issue": null,
+      "page": "323-333",
+      "url": "https://doi.org/10.1109/sse62657.2024.00054"
+    },
+    {
+      "doi": "10.1145/2807591.2807644",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Scientific benchmarking of parallel computing systems",
+      "year": 2015,
+      "container": "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+      "volume": null,
+      "issue": null,
+      "page": "1-12",
+      "url": "https://doi.org/10.1145/2807591.2807644"
+    },
+    {
+      "doi": "10.1145/3297858.3304008",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Scalable Processing of Contemporary Semi-Structured Data on Commodity Parallel Processors - A Compilation-based Approach",
+      "year": 2019,
+      "container": "Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "volume": null,
+      "issue": null,
+      "page": "79-92",
+      "url": "https://doi.org/10.1145/3297858.3304008"
+    },
+    {
+      "doi": "10.1145/3321704",
+      "registry": "crossref",
+      "status": "found",
+      "title": "CORES",
+      "year": 2019,
+      "container": "ACM Transactions on Storage",
+      "volume": "15",
+      "issue": "3",
+      "page": "1-46",
+      "url": "https://doi.org/10.1145/3321704"
+    },
+    {
+      "doi": "10.1145/3426422.3426978",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Wasm/k: delimited continuations for WebAssembly",
+      "year": 2020,
+      "container": "Proceedings of the 16th ACM SIGPLAN International Symposium on Dynamic Languages",
+      "volume": null,
+      "issue": null,
+      "page": "16-28",
+      "url": "https://doi.org/10.1145/3426422.3426978"
+    },
+    {
+      "doi": "10.1145/3448016.3452809",
+      "registry": "crossref",
+      "status": "found",
+      "title": "JSON Tiles: Fast Analytics on Semi-Structured Data",
+      "year": 2021,
+      "container": "Proceedings of the 2021 International Conference on Management of Data",
+      "volume": null,
+      "issue": null,
+      "page": "445-458",
+      "url": "https://doi.org/10.1145/3448016.3452809"
+    },
+    {
+      "doi": "10.1145/3487552.3487827",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Understanding the performance of webassembly applications",
+      "year": 2021,
+      "container": "Proceedings of the 21st ACM Internet Measurement Conference",
+      "volume": null,
+      "issue": null,
+      "page": "533-549",
+      "url": "https://doi.org/10.1145/3487552.3487827"
+    },
+    {
+      "doi": "10.1145/3498688",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Isolation without taxation: near-zero-cost transitions for WebAssembly and SFI",
+      "year": 2022,
+      "container": "Proceedings of the ACM on Programming Languages",
+      "volume": "6",
+      "issue": "POPL",
+      "page": "1-30",
+      "url": "https://doi.org/10.1145/3498688"
+    },
+    {
+      "doi": "10.1145/3503222.3507719",
+      "registry": "crossref",
+      "status": "found",
+      "title": "JSONSki: streaming semi-structured data with bit-parallel fast-forwarding",
+      "year": 2022,
+      "container": "Proceedings of the 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "volume": null,
+      "issue": null,
+      "page": "200-211",
+      "url": "https://doi.org/10.1145/3503222.3507719"
+    },
+    {
+      "doi": "10.1145/3533737.3535094",
+      "registry": "crossref",
+      "status": "found",
+      "title": "PipeJSON: Parsing JSON at Line Speed on FPGAs",
+      "year": 2022,
+      "container": "Data Management on New Hardware",
+      "volume": null,
+      "issue": null,
+      "page": "1-7",
+      "url": "https://doi.org/10.1145/3533737.3535094"
+    },
+    {
+      "doi": "10.1145/3572848.3577436",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Exploring the Use of WebAssembly in HPC",
+      "year": 2023,
+      "container": "Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming",
+      "volume": null,
+      "issue": null,
+      "page": "92-106",
+      "url": "https://doi.org/10.1145/3572848.3577436"
+    },
+    {
+      "doi": "10.1145/3588957",
+      "registry": "crossref",
+      "status": "found",
+      "title": "dsJSON: A Distributed SQL JSON Processor",
+      "year": 2023,
+      "container": "Proceedings of the ACM on Management of Data",
+      "volume": "1",
+      "issue": "1",
+      "page": "1-25",
+      "url": "https://doi.org/10.1145/3588957"
+    },
+    {
+      "doi": "10.1145/3593434.3593454",
+      "registry": "crossref",
+      "status": "found",
+      "title": "On the Energy Consumption and Performance of WebAssembly Binaries across Programming Languages and Runtimes in IoT",
+      "year": 2023,
+      "container": "Proceedings of the 27th International Conference on Evaluation and Assessment in Software Engineering",
+      "volume": null,
+      "issue": null,
+      "page": "72-82",
+      "url": "https://doi.org/10.1145/3593434.3593454"
+    },
+    {
+      "doi": "10.1145/3611643.3616311",
+      "registry": "crossref",
+      "status": "found",
+      "title": "When Function Inlining Meets WebAssembly: Counterintuitive Impacts on Runtime Performance",
+      "year": 2023,
+      "container": "Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+      "volume": null,
+      "issue": null,
+      "page": "350-362",
+      "url": "https://doi.org/10.1145/3611643.3616311"
+    },
+    {
+      "doi": "10.1145/3623278.3624754",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Supporting Descendants in SIMD-Accelerated JSONPath",
+      "year": 2023,
+      "container": "Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4",
+      "volume": null,
+      "issue": null,
+      "page": "338-361",
+      "url": "https://doi.org/10.1145/3623278.3624754"
+    },
+    {
+      "doi": "10.1145/3712197",
+      "registry": "crossref",
+      "status": "found",
+      "title": "WebAssembly for Container Runtime: Are We There Yet?",
+      "year": 2025,
+      "container": "ACM Transactions on Software Engineering and Methodology",
+      "volume": "34",
+      "issue": "6",
+      "page": "1-22",
+      "url": "https://doi.org/10.1145/3712197"
+    },
+    {
+      "doi": "10.1145/3714465",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Research on WebAssembly Runtimes: A Survey",
+      "year": 2025,
+      "container": "ACM Transactions on Software Engineering and Methodology",
+      "volume": "34",
+      "issue": "8",
+      "page": "1-47",
+      "url": "https://doi.org/10.1145/3714465"
+    },
+    {
+      "doi": "10.1145/3733812.3765536",
+      "registry": "crossref",
+      "status": "found",
+      "title": "WebAssembly Memory Tagging",
+      "year": 2025,
+      "container": "Proceedings of the 2025 Cloud Computing Security Workshop",
+      "volume": null,
+      "issue": null,
+      "page": "63-79",
+      "url": "https://doi.org/10.1145/3733812.3765536"
+    },
+    {
+      "doi": "10.1145/3736169",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Benchmarking WebAssembly for Embedded Systems",
+      "year": 2025,
+      "container": "ACM Transactions on Architecture and Code Optimization",
+      "volume": "22",
+      "issue": "3",
+      "page": "1-21",
+      "url": "https://doi.org/10.1145/3736169"
+    },
+    {
+      "doi": "10.1145/3744916.3764533",
+      "registry": "crossref",
+      "status": "found",
+      "title": "An Empirical Study of WebAssembly Usage in Node.js",
+      "year": 2026,
+      "container": "Proceedings of the 2026 IEEE/ACM 48th International Conference on Software Engineering",
+      "volume": null,
+      "issue": null,
+      "page": "1482-1493",
+      "url": "https://doi.org/10.1145/3744916.3764533"
+    },
+    {
+      "doi": "10.1145/3760387",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Wasm-IO: Enabling Low-Level Device Interaction in WebAssembly for Industry Automation",
+      "year": 2025,
+      "container": "ACM Transactions on Embedded Computing Systems",
+      "volume": "24",
+      "issue": "5s",
+      "page": "1-26",
+      "url": "https://doi.org/10.1145/3760387"
+    },
+    {
+      "doi": "10.1145/3859286",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Fast Forgiving Base64 Decoding with SIMD Instructions",
+      "year": 2027,
+      "container": "ACM Transactions on Architecture and Code Optimization",
+      "volume": "24",
+      "issue": "1",
+      "page": "1-23",
+      "url": "https://doi.org/10.1145/3859286"
+    },
+    {
+      "doi": "10.14778/3115404.3115416",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Mison",
+      "year": 2017,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "10",
+      "issue": "10",
+      "page": "1118-1129",
+      "url": "https://doi.org/10.14778/3115404.3115416"
+    },
+    {
+      "doi": "10.14778/3137765.3137782",
+      "registry": "crossref",
+      "status": "found",
+      "title": "FAD.js",
+      "year": 2017,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "10",
+      "issue": "12",
+      "page": "1778-1789",
+      "url": "https://doi.org/10.14778/3137765.3137782"
+    },
+    {
+      "doi": "10.14778/3236187.3236207",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Filter before you parse",
+      "year": 2018,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "11",
+      "issue": "11",
+      "page": "1576-1589",
+      "url": "https://doi.org/10.14778/3236187.3236207"
+    },
+    {
+      "doi": "10.14778/3436905.3436926",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Scalable structural index construction for JSON analytics",
+      "year": 2020,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "14",
+      "issue": "4",
+      "page": "694-707",
+      "url": "https://doi.org/10.14778/3436905.3436926"
+    },
+    {
+      "doi": "10.14778/3611479.3611481",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Scalable Reasoning on Document Stores via Instance-Aware Query Rewriting",
+      "year": 2023,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "16",
+      "issue": "11",
+      "page": "2699-2713",
+      "url": "https://doi.org/10.14778/3611479.3611481"
+    },
+    {
+      "doi": "10.14778/3746405.3746439",
+      "registry": "crossref",
+      "status": "found",
+      "title": "GpJSON: High-Performance JSON Data Processing on GPUs",
+      "year": 2025,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "18",
+      "issue": "9",
+      "page": "3216-3229",
+      "url": "https://doi.org/10.14778/3746405.3746439"
+    },
+    {
+      "doi": "10.14778/3778092.3778109",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Streaming Validation of JSON Documents against Schemas",
+      "year": 2025,
+      "container": "Proceedings of the VLDB Endowment",
+      "volume": "19",
+      "issue": "3",
+      "page": "509-522",
+      "url": "https://doi.org/10.14778/3778092.3778109"
+    },
+    {
+      "doi": "10.17487/RFC8259",
+      "registry": "crossref",
+      "status": "found",
+      "title": "The JavaScript Object Notation (JSON) Data Interchange Format",
+      "year": 2017,
+      "container": null,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "url": "https://doi.org/10.17487/rfc8259"
+    },
+    {
+      "doi": "10.31649/vitce/2.2026.121",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Parallelism and WebAssembly memory management in microinterface architecture",
+      "year": 2026,
+      "container": "Information Technology and Computer Engineering",
+      "volume": null,
+      "issue": "23",
+      "page": "121-131",
+      "url": "https://doi.org/10.31649/vitce/2.2026.121"
+    },
+    {
+      "doi": "10.3390/fi16090341",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Efficient Data Exchange between WebAssembly Modules",
+      "year": 2024,
+      "container": "Future Internet",
+      "volume": "16",
+      "issue": "9",
+      "page": "341",
+      "url": "https://doi.org/10.3390/fi16090341"
+    },
+    {
+      "doi": "10.47852/bonviewAAES52024965",
+      "registry": "crossref",
+      "status": "found",
+      "title": "A Comparative Study of WebAssembly Runtimes: Performance Metrics, Integration Challenges, Application Domains, and Security Features",
+      "year": 2025,
+      "container": "Archives of Advanced Engineering Science",
+      "volume": "4",
+      "issue": "3",
+      "page": "275-287",
+      "url": "https://doi.org/10.47852/bonviewaaes52024965"
+    },
+    {
+      "doi": "10.48550/arXiv.1902.08318",
+      "registry": "datacite",
+      "status": "found",
+      "title": "Parsing Gigabytes of JSON per Second",
+      "year": 2019,
+      "container": "arXiv",
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "url": "https://arxiv.org/abs/1902.08318"
+    },
+    {
+      "doi": "10.48550/arXiv.2205.05464",
+      "registry": "datacite",
+      "status": "found",
+      "title": "Raw Filtering of JSON Data on FPGAs",
+      "year": 2022,
+      "container": "arXiv",
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "url": "https://arxiv.org/abs/2205.05464"
+    },
+    {
+      "doi": "10.48550/arXiv.2512.00035",
+      "registry": "datacite",
+      "status": "found",
+      "title": "WebAssembly on Resource-Constrained IoT Devices: Performance, Efficiency, and Portability",
+      "year": 2025,
+      "container": "arXiv",
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "url": "https://arxiv.org/abs/2512.00035"
+    },
+    {
+      "doi": "10.51219/JAIMLD/chakradhar-avinash-devarapalli/63",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Web Assembly (Wasm): An Innovation to Client-Side Improvement",
+      "year": 2024,
+      "container": "Journal of Artificial Intelligence, Machine Learning and Data Science",
+      "volume": "2",
+      "issue": "1",
+      "page": "170-172",
+      "url": "https://doi.org/10.51219/jaimld/chakradhar-avinash-devarapalli/63"
+    },
+    {
+      "doi": "10.5753/sbesc_estendido.2020.13102",
+      "registry": "crossref",
+      "status": "found",
+      "title": "Analysis of WebAssembly as a Strategy to Improve JavaScript Performance on IoT Environments",
+      "year": 2020,
+      "container": "Anais Estendidos do X Simpósio Brasileiro de Engenharia de Sistemas Computacionais (SBESC Estendido 2020)",
+      "volume": null,
+      "issue": null,
+      "page": "133-138",
+      "url": "https://doi.org/10.5753/sbesc_estendido.2020.13102"
+    }
+  ]
 }
