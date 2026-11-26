@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "charter_raw_provenance",
+  "date": "2026-11-18",
+  "slug": "repository-phase-d-results",
+  "description": "Repository-boundary speedups (Phase D): warmed Mongo-cache canonical-bytes path vs file-store path, both sites. CI includes 1 for the file-store rows (negative result retained).",
+  "source_ledger": "article\\data\\csv\\evidence-ledger.csv",
+  "source_ledger_sha256": "800218af02b4fdc3d18147dfcebd404b93c53e371908dc505fa56bbcee4311eb",
+  "estimand": "S = T_V8/T_ZE; ratio of round-level medians over 15 paired rounds; paired bootstrap B=10000, seed=20261117, percentile 95% CI",
+  "estimand_spec": "article/drafts/paired-bootstrap-estimand-spec.md",
+  "run_ids": [
+    "server-lanjut-20261116060933-8a1324b",
+    "zuu-20261115080840-6d87bf3"
+  ],
+  "interpretation": "Mongo-cache rows: CI entirely above 1 on both sites; file-store rows: CI includes 1 (no advantage)."
+}

@@ -1,0 +1,192 @@
+{
+  "generated": "2026-11-25",
+  "source": {
+    "markdown": {
+      "path": "article\\drafts\\article-draft.md",
+      "sha256": "17676793cd5ee1e630e2613f8d5d6f162b9df8a7c4d63137869e6e9ebb3e4915"
+    },
+    "docx": {
+      "path": "article\\drafts\\article-draft.docx",
+      "sha256": "e9073ec5970bce6ab9f63efe22fa7d4abfd6273a7b094af6011d3dcf150734d8",
+      "bytes": 3592419
+    },
+    "pdf": {
+      "path": "article\\drafts\\article-draft.pdf",
+      "sha256": "63c61449d16741040f0e4e6731470d46e19292eec2d4636c57d23f55f44a0fca",
+      "bytes": 3877162
+    },
+    "bib": {
+      "path": "article\\data\\bib\\cites.bib",
+      "sha256": "79c842684b8e54196b9b094a7e02f5b5968654a77fac19f013d0dddb18638c4f"
+    }
+  },
+  "counts": {
+    "title_words": 11,
+    "abstract_words": 244,
+    "keywords": [
+      "JSON parsing",
+      "on-demand parsing",
+      "WebAssembly",
+      "Node.js",
+      "performance evaluation"
+    ],
+    "body_words_inclusive": 6950,
+    "body_words_prose": 5796,
+    "references": 42,
+    "doi_manuscript": 41,
+    "doi_bib": 41,
+    "doi_case_differences": [
+      "10.1109/ACCESS.2026.3732375"
+    ],
+    "citation_mentions": 66,
+    "citation_unique": 42,
+    "citations_after_punctuation": 0,
+    "figures": 12,
+    "tables": 19
+  },
+  "docx": {
+    "paragraphs": 133,
+    "reference_paragraphs": 42,
+    "tables": 9,
+    "images": [
+      {
+        "index": 1,
+        "pixels": [
+          9234,
+          4041
+        ],
+        "display_in": [
+          6.1,
+          2.669
+        ],
+        "dpi": [
+          1514,
+          1514
+        ],
+        "sha256": "90a5e5d5dab875df"
+      },
+      {
+        "index": 2,
+        "pixels": [
+          5184,
+          9198
+        ],
+        "display_in": [
+          3.832,
+          6.8
+        ],
+        "dpi": [
+          1353,
+          1353
+        ],
+        "sha256": "a5208a9bacd19b13"
+      },
+      {
+        "index": 3,
+        "pixels": [
+          7128,
+          7740
+        ],
+        "display_in": [
+          6.1,
+          6.624
+        ],
+        "dpi": [
+          1169,
+          1169
+        ],
+        "sha256": "2e1f7ee697bd9bcb"
+      },
+      {
+        "index": 4,
+        "pixels": [
+          7292,
+          3816
+        ],
+        "display_in": [
+          6.1,
+          3.192
+        ],
+        "dpi": [
+          1195,
+          1195
+        ],
+        "sha256": "5ed1d255af103efd"
+      },
+      {
+        "index": 5,
+        "pixels": [
+          6901,
+          4276
+        ],
+        "display_in": [
+          6.1,
+          3.78
+        ],
+        "dpi": [
+          1131,
+          1131
+        ],
+        "sha256": "61592403b2507af4"
+      },
+      {
+        "index": 6,
+        "pixels": [
+          6901,
+          3656
+        ],
+        "display_in": [
+          6.1,
+          3.232
+        ],
+        "dpi": [
+          1131,
+          1131
+        ],
+        "sha256": "fb48ed187f618730"
+      }
+    ],
+    "core_properties": {
+      "title": "On-Demand JSON Parsing in Node.js Servers via WebAssembly: A Multi-Boundary Evaluation",
+      "author": "Rafi Indra Pramudhito Zuhayr",
+      "subject": "Original Research Article",
+      "keywords": "JSON parsing; on-demand parsing; WebAssembly; Node.js; performance evaluation"
+    }
+  },
+  "pdf": {
+    "pages": 16,
+    "metadata": {
+      "title": "On-Demand JSON Parsing in Node.js Servers via WebAssembly: A Multi-Boundary Evaluation",
+      "author": "Rafi Indra Pramudhito Zuhayr",
+      "subject": "Original Research Article",
+      "keywords": "JSON parsing; on-demand parsing; WebAssembly; Node.js; performance evaluation"
+    },
+    "has_all_references": true,
+    "has_figures": true,
+    "has_tables": true,
+    "has_ai_declaration": true,
+    "has_conflict_of_interest": true
+  },
+  "checks": {
+    "title_le_20_words": true,
+    "abstract_single_paragraph_250_words": true,
+    "keywords_3_to_7": true,
+    "body_5000_to_8000_words": true,
+    "references_contiguous_1_to_42": true,
+    "all_references_cited": true,
+    "citation_first_appearance_order": true,
+    "no_citation_after_punctuation": true,
+    "no_duplicate_doi": true,
+    "manuscript_doi_set_matches_bib": true,
+    "figures_1_to_6_in_order": true,
+    "tables_1_to_8_in_order": true,
+    "docx_reference_paragraphs_42": true,
+    "docx_tables_9": true,
+    "docx_images_6": true,
+    "figure_resolution_at_least_1000_dpi": true,
+    "pdf_has_all_references": true,
+    "pdf_has_figures_and_tables": true,
+    "pdf_has_ai_declaration": true
+  },
+  "failed_checks": []
+}

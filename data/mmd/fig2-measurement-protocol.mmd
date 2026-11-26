@@ -1,0 +1,9 @@
+flowchart TD
+    W["Warmup: 3 untimed iterations per path (E: 3 requests per engine)"] --> R["15 independent measured rounds; path order rotated per round"]
+    R --> AGG["Per-round value: mean of reps (A-D); median of 10 requests per engine (E: 20 requests per round total)"]
+    AGG --> PAR{"Parity gate (E): all 300 response bodies byte-identical?"}
+    PAR -- "mismatch" --> VOID["Run voided: no record"]
+    PAR -- "identical" --> REC["Raw exhibit + measurement record (schema v1.0.0)"]
+    REC --> VAL{"Schema validator"}
+    VAL -- "FAIL" --> DROP["Not used in analysis"]
+    VAL -- "PASS" --> LED["Evidence ledger: 16 columns, sha256 provenance"]

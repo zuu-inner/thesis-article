@@ -1,0 +1,28 @@
+{
+ "ledger_cells": 63,
+ "displayed_triples": 45,
+ "unmatched_triples": [],
+ "chart_checks": [
+  {
+   "slug": "diagnostic-phase-speedup",
+   "rows": 36,
+   "mismatches": 0
+  },
+  {
+   "slug": "repository-phase-d-results",
+   "rows": 4,
+   "mismatches": 0
+  },
+  {
+   "slug": "http-endpoint-phase-e-results",
+   "rows": 3,
+   "mismatches": 0
+  }
+ ],
+ "figure_markers": 6,
+ "table_markers": 8,
+ "reference_entries": 28,
+ "metadata_title_match": true,
+ "metadata_keywords_match": true,
+ "metadata_cites_match": true
+}
